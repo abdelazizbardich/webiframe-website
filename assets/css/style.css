@@ -42,9 +42,16 @@ small, .text_small {font-size: 0.75rem;}
 /* Buttons  */
 .btn-primary{
     background-image: linear-gradient(96deg, #9289f1 0%, #6254e7 100%);
+    border-color: #9289f1;
 }
 .btn-warning{
     background-image: linear-gradient(45deg, #ef3b58, #fe7725);
+    border-color: #fe7725;
+    color: white;
+}
+.btn-danger{
+    background-image: linear-gradient(96deg, #f44336 0%, #e91e63 100%);
+    border-color: #f44336;
     color: white;
 }
 /* Layouts */
@@ -56,6 +63,11 @@ header{
     right: 0;
     z-index: 9;
     padding: 16px;
+    transition: .2s;
+}
+.bg-w-70{
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: rgb(0 0 0 / 16%) 0px 0px 16px;
 }
 .logo-holder img{
     margin-right: 10%;
@@ -70,13 +82,17 @@ header li{
 header a{
     color: black
 }
+main > section{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
 section#home h1{
     font-weight: bold;
 }
 /* header div.row > div:nth-child(1){} */
 header div.row > div:nth-child(2){
-    justify-content: left;
-    align-items: center;
+    /* justify-content: left;
+    align-items: center; */
 }
 /* header div.row > div:nth-child(3){} */
 section#home{
@@ -96,4 +112,171 @@ section#home::before{
     background-position: right top;
     background-size: contain;
     background-repeat: no-repeat;
+}
+section#home  div.col > span{
+    font-size: 32px;
+}
+.service-card{
+    padding: 16px;
+    border-radius: 16px;
+    height: 100%;
+}
+.skills .skill{
+    border-radius: 16px;
+    margin-bottom: 32px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.skill .skill-title > span {
+    font-size: xxx-large;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.skill .skill-title {
+    display: block;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 15px;
+    border-right: 1px solid lightgrey;
+}
+section#presentation{
+    position: relative;
+}
+section#presentation::before{
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 250px;
+    height: 250px;
+    background-image: url('../img/element_01.png');
+    background-position: center left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+section#presentation::after{
+    content: '';
+    position: absolute;
+    right: 0%;
+    top: 30%;
+    width: 250px;
+    height: 250px;
+    background-image: url('../img/element_03.png');
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+/* Experiences */
+section#experiences{
+position: relative;
+}
+section#experiences::before{
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    min-height: 100%;
+    background-image: url('../img/figure-image1.png');
+    background-position: left top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.row > div{
+    height: 100%;
+}
+.progress{
+    height: .5rem;
+}
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+}
+.project{
+    /* border-radius: 16px; */
+    overflow: hidden;
+    position: relative;
+}
+.project-detail{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(100%);
+    transition: .5s;
+}
+.project:hover .project-detail{
+    transform: translateY(0%);
+}
+.project:hover .project-detail{
+    transform: translateY(0%);
+}
+.offers-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    margin-top: 96px;
+}
+.offers-grid .offer:nth-child(2){
+    transform: scale(1.1);
+    position: relative;
+    z-index: 1;
+    box-shadow: #630000ad 1px 16px 40px;
+    border: none !important;
+}
+.offer{
+    border-radius: 16px;
+    text-align: center;
+    padding: 16px;
+}
+.offer ul{
+    list-style: none;
+}
+.offer ul li{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 16px;
+}
+.offer ul li:last-child{
+    border:none;
+}
+
+.offer-price{
+    font-size: 5rem;
+    position: relative;
+}
+.offer-price::before{
+    content: 'from ';
+    color: white;
+    position: absolute;
+    margin: auto;
+    font-size: 1rem;
+    opacity: .5;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+::placeholder{
+    opacity: .6 !important;
+    font-size: .9rem;
+}
+#audit{
+    background-image: url('../img/home5_bg_01.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#f-about ul{
+    list-style: none;
+}
+#f-about ul li{
+    display: inline-block;
+    margin: 16px;
 }
