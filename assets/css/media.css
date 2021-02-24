@@ -68,6 +68,13 @@
         padding: 16px;
         font-size: larger;
     }
+    .s-box {
+        position: absolute;
+        right: 0%;
+    }
+    .show-m-nav{
+        display: block;
+    }
 }
 /* Mobile M */
 /* Mobile S */
@@ -139,6 +146,13 @@
         display: block;
         padding: 16px;
         font-size: larger;
+    }
+    .s-box {
+        position: absolute;
+        right: 0%;
+    }
+    .show-m-nav{
+        display: block;
     }
 }
 @media only screen and (min-width:426px) and (max-width: 768px) {
@@ -212,5 +226,12 @@
         display: block;
         padding: 16px;
         font-size: larger;
+    }
+    .s-box {
+        position: absolute;
+        right: 0%;
+    }
+    .show-m-nav{
+        display: block;
     }
 }
