@@ -40,5 +40,4 @@ $(document).ready(function(){
         $('.show-m-nav').toggleClass('open');
         $(this).parents('.nav').toggleClass('show');
     });
-
 });
