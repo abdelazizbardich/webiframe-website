@@ -116,8 +116,7 @@
       <section id="project-view">
         <div class="container">
           <div class="row">
-            <div class="col-12 mb-2">
-              <div class="jumbotron bg-white text-center border-none"><h1 class="h2">Site e-commerce paiement à la livraison</h1></div>
+            <div class="col-12 mb-2 col-md-8">
               <div class="page-view shadow-lg">
                 <div class="page-holder">
                   <a href="#">
@@ -137,8 +136,115 @@
                 </div>
                 <div class="col-6">
                   <a href="#" class="d-block btn-lg shadow-lg btn btn-success"
-                    >Créer mon site web</a
+                    >Version mobile</a
                   >
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-2 col-md-4">
+              <div class="site-details">
+                <h1 class="h4">Site e-commerce paiement à la livraison</h1>
+                <hr />
+                <u>Brève description du site:</u><br />
+                <p class="small">
+                  Ce modèle est idéale pour tout site web d'hôtel ou de chambre
+                  d'hôte. Attirez l'attention des voyageurs sur vos suites et
+                  chambres en insérant vos images sur le slideshow, exposez vos
+                  tarifs, vos services et permettez aux internautes de demander
+                  des réservations en ligne grâce au formulaire de contact.
+                </p>
+                <hr />
+                <u>Nom de domaine:</u> <br />
+                <div>
+                  <p class="small">
+                    Entrez le nom de domaine qui sera associé à votre site web,
+                    puis appuyez sur le boutton Valider.
+                  </p>
+                </div>
+                <div>
+                  <form action="./check.php" method="post">
+                    <div class="form-row">
+                      <div class="col-6 form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Votre domaine..."
+                        />
+                      </div>
+                      <div class="col-4 form-group">
+                        <select name="domaine" class="form-control">
+                          <option value=".com">.com</option>
+                          <option value=".fr">.fr</option>
+                          <option value=".ca">.ca</option>
+                          <option value=".net">.net</option>
+                          <option value=".org">.org</option>
+                          <option value=".gov">.gov</option>
+                          <option value=".info">.info</option>
+                          <option value=".me">.me</option>
+                        </select>
+                      </div>
+                      <div class="col-2 form-group">
+                        <button type="submit" class="btn btn-warning d-block">
+                          Valider
+                        </button>
+                      </div>
+                    </div>
+                    <div class="alert alert-success small">
+                      <i class="fa fa-check"></i> Domaine est disponible
+                    </div>
+                    <div class="alert alert-danger small">
+                      <i class="fa fa-times"></i> Domaine indisponible
+                    </div>
+                  </form>
+                </div>
+                <u>Options additionelles:</u> <br />
+                <div class="p-2 border shadow bg-light">
+                  <form action="./order.php" method="post">
+                    <div class="form-row">
+                      <div class="col-12 form-group">
+                        <label for="seo">Référencement web:</label>
+                        <select name="seo" class="form-control" id="seo">
+                          <option value="s">Standard: Sans surcoût</option>
+                          <option value="p">Premium: 2000dh</option>
+                        </select>
+                      </div>
+                      <div class="col-12 form-group">
+                        <label for="lang">Langue du site web:</label>
+                        <select name="lang" class="form-control" id="lang">
+                          <option value="fr">Francais: Sans surcoût</option>
+                          <option value="en">Anglais: Sans surcoût</option>
+                          <option value="ar">Arabe: Sans surcoût</option>
+                        </select>
+                      </div>
+                      <div class="col-12 form-group">
+                        <label for="s-lang">Deuxième langue:</label>
+                        <select name="s-lang" class="form-control" id="s-lang">
+                          <option value="s">Aucune: Sans surcoût</option>
+                          <option value="fr">Francais: 2000dh</option>
+                          <option value="an">Anglais: 2000dh</option>
+                          <option value="ar">Arabe: 2000dh</option>
+                        </select>
+                      </div>
+                      <div class="col-12 form-group">
+                        <label for="newsletter">Inscription newsletter:</label>
+                        <select
+                          name="newsletter"
+                          class="form-control"
+                          id="newsletter"
+                        >
+                          <option value="s">
+                            Sans Newsletter: Sans surcoût
+                          </option>
+                          <option value="a">Avec Newsletter: 2000dh</option>
+                        </select>
+                      </div>
+                      <div class="col-12 form-group">
+                        <button class="btn btn-primary btn-lg form-control">
+                          Créer mon site web
+                        </button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

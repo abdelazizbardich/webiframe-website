@@ -51,8 +51,8 @@ h5 {
 }
 
 small,
-.text_small {
-  font-size: 0.75rem;
+.text_small,::placeholder,label {
+  font-size: 0.85rem;
 }
 * {
   margin: 0;
@@ -295,6 +295,12 @@ section#experiences::before {
 }
 #audit {
   background-image: url("../img/home5_bg_01.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#call-to-action {
+  background-image: url("../img/call_01.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
