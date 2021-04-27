@@ -238,6 +238,20 @@ section#experiences::before {
   transform: translateY(100%);
   transition: 0.5s;
 }
+.project::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: 0.5s;
+  opacity: 0;
+}
+.project:hover::before {
+  background: #ffffff6b;
+  opacity: 1;
+}
 .project:hover .project-detail {
   transform: translateY(0%);
 }
