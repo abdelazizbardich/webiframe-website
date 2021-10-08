@@ -1,0 +1,19 @@
+@import "@fontsource/tajawal";
+
+.rtl body{
+    font-family: "Tajawal";
+}
+.rtl section#home::before,.rtl section#experiences::before {
+    left: 0;
+    right: auto;
+    transform: scaleX(-1);
+}
+
+.rtl .s-box {
+    left: 100%;
+    right: auto;
+}
+.rtl .s-box button {
+    margin-left: 0px;
+    margin-right: 5px;
+}

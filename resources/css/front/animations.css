@@ -1,0 +1,8 @@
+@keyframes frozen {
+    0% {
+      background-position: calc(-160px);
+    }
+    100% {
+      background-position: 160px;
+    }
+  }
