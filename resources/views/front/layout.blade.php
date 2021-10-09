@@ -16,7 +16,6 @@
         <title>@yield('title') - {{ __('front.'.config('app.name')) }}</title>
     <!-- Favicon -->
         <link rel="shortcut icon" href="{{ asset('images/logo.png') }}" type="image/x-icon">
-
     <!--
          All css
     -->
@@ -28,20 +27,22 @@
             <div class="row">
                 <div class="col-6 col-lg-auto">
                     <div class="logo-holder">
-                        <a href="#"><img src="{{ asset('images/logo.png')}}" class="img-fluid" alt="{{ config('app.name') }} logo"></a>
+                        <a href="{{ route('home') }}"><img src="{{ asset('images/logo.png')}}" class="img-fluid" alt="{{ config('app.name') }} logo"></a>
                     </div>
                 </div>
                 <div class="col nav">
                     <nav>
                         <ul>
-                            <li><a href="#home">@lang('front.home')</a></li>
-                            <li><a href="#presentation">{{ __('front.Presentation')}}</a></li>
-                            <li><a href="#services">{{ __('front.Services')}}</a></li>
-                            <li><a href="#projects">{{ __('front.Projects')}}</a></li>
-                            <li><a href="#offers">{{ __('front.Pricing')}}</a></li>
-                            <li><a href="#">{{ __('front.Blog')}}</a></li>
-                            <li><a href="#audit" class="client-area btn btn-lg btn-success">{{ __('front.Free Audit')}}</a></li>
-                            <li><a href="https://client.webiframe.com/" rel="nofollow" class="client-area btn btn-lg btn-warning">{{ __('front.Client area') }}</a></li>
+                            <li><a data-current="@yield('title')" data-title="{{ __('front.home') }}" href="{{ route('home') }}/#home">@lang('front.home')</a></li>
+                            <li><a data-current="@yield('title')" data-title="{{ __('front.Presentation') }}" href="{{ route('home') }}/#presentation">{{ __('front.Presentation')}}</a></li>
+                            <li><a data-current="@yield('title')" data-title="{{ __('front.Services') }}" href="{{ route('home') }}/#services">{{ __('front.Services')}}</a></li>
+                            <li><a data-current="@yield('title')" data-title="{{ __('front.Projects') }}" href="{{ route('projects') }}">{{ __('front.Projects')}}</a></li>
+                            <li><a data-current="@yield('title')" data-title="{{ __('front.demos') }}" href="{{ route('demos') }}">{{ __('front.demos')}}</a></li>
+                            <li><a data-current="@yield('title')" data-title="{{ __('front.Pricing') }}" href="{{ route('home') }}/#offers">{{ __('front.Pricing')}}</a></li>
+                            <li><a data-current="@yield('title')" data-title="{{ __('front.contact') }}" href="{{ route('contact') }}">{{ __('front.contact')}}</a></li>
+                            {{-- <li><a data-current="@yield('title')" data-title="{{ __('front.Blog') }}" href="{{ route('blog.home') }}">{{ __('front.Blog')}}</a></li> --}}
+                            <li><a data-current="@yield('title')" data-title="{{ __('front.Free Audit') }}" href="{{ route('home') }}/#audit" class="client-area btn btn-lg btn-success">{{ __('front.Free Audit')}}</a></li>
+                            <li><a data-current="@yield('title')" data-title="{{ __('front.Client area') }}" href="https://client.webiframe.com/" rel="nofollow" class="client-area btn btn-lg btn-warning">{{ __('front.Client area') }}</a></li>
                         </ul>
                         <ul class="localisation">
                             <li class="lang-btn {{ (config('app.locale') == "en")?'active':'' }}"><a href="{{ route('set-lang','en',Route::current()->getName()) }}">English</a></li>

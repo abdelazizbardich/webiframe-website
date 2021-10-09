@@ -16028,6 +16028,10 @@ header li {
   display: inline-block;
   padding: 8px;
 }
+header a.active {
+    color: #ef3d5a;
+    font-weight: bold;
+}
 header a {
     color: black;
     text-decoration: none;
@@ -16250,7 +16254,7 @@ section#experiences::before {
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: soft-light;
-    background-color: #d1d1d1;
+    background-color: #1d272e;
 }
 #audit input {
     border-width: 3px;
@@ -16437,7 +16441,7 @@ footer{
     padding: 3px 8px !important;
     margin-block: auto;
     border-radius: 50px;
-    font-size: 1.1rem;
+    font-size: .8rem;
     height: 35px;
     display: inline-flex;
     justify-content: center;
@@ -16470,6 +16474,41 @@ footer{
     background-size: calc(160px + 160px);
     -webkit-animation: frozen 1s infinite linear;
             animation: frozen 1s infinite linear;
+}
+
+.pagination{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+.pagination .page-link{
+    height: 35px;
+    width: 35px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #ef3d5a;
+    border-color: #ef3d5a;
+    box-shadow: #ef3d5a 0px 0px 6px;
+}
+.page-item.disabled .page-link {
+    cursor: unset;
+    opacity: 0.3;
+}
+.page-item:last-child .page-link,.page-item:first-child .page-link  {
+    border-radius: 30px;
+    background: #877cef;
+    color: #ffffff;
 }
 
 /* Mobile S */
@@ -16627,6 +16666,20 @@ footer{
     }
     .show-m-nav{
         display: block;
+    }
+}
+@media only screen and (max-width: 768px) {
+    ul.localisation {
+        display: flex;
+    }
+    header nav > ul:nth-child(1) > li:nth-last-child(2){
+        float: left;
+    }
+    header nav > ul:nth-child(1) > li:nth-last-child(1){
+        float: right;
+    }
+    header nav {
+        flex-direction: column;
     }
 }
 @media only screen and (min-width:426px) and (max-width: 768px) {

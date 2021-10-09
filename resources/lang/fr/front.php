@@ -6,6 +6,29 @@ return [
     "Domain name is not available" => "Le nom de domaine n'est pas disponible",
     "try another name" => "essayez un autre nom",
     "Domain name is available" => "Le nom de domaine est disponible",
+    "for" => "Pour",
+    "year" => "année",
+    "free for first year" => "gratuit la première année",
+    "demos" => "Démos",
+    "contact" => "Contact",
+    "Contact us" => "Contactez-nous",
+    "We aim to respond to all inquiries within 2-4 business days.<br>You can also reach us by whatsapp" => "Nous visons à répondre à toutes les demandes dans un délai de 2 à 4 jours ouvrables.<br>Vous pouvez également nous joindre par WhatsApp",
+    "Submit a bug" => "Soumettre un bug",
+    "Sales question" => "Question de vente",
+    "Technical Support" => "Soutien technique",
+    "Contact" => "Contact",
+
+    "first name" => "Prénom",
+    "last name" => "Nom de famille",
+    "email" => "E-mail",
+    "phone" => "Téléphone",
+    "subject type" => "Type de sujet",
+    "subject" => "Sujet",
+    "message" => "Message",
+
+
+
+
     // app infos
     "Webiframe"=>"Webiframe",
     // layout
@@ -112,6 +135,18 @@ return [
     "None" => "Aucune",
     "Without Newsletter" => "Sans Newsletter",
     "With Newsletter" => "Avec Newsletter",
+    "Screenshots" => "Captures d'écran",
+    "know more" => "Savoir plus",
+    "Demo" => "Démo",
+    "Full description" => "Description complète",
+    "Our demo sites" => "Nos sites démo",
+    "We are creating many site demos that fits every business needs" => "Nous créons de nombreuses démos de sites qui répondent aux besoins de chaque entreprise",
+    "Other demos" => "D'autres démos",
+    "More +" => "Plus +",
+    "Show All" => "Afficher tout",
+    "" => "",
+    "" => "",
+    "" => "",
     "" => "",
     "" => "",
     "" => "",

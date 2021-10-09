@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('domain-name/check/{domaine}', function (Request $request,$domain) {
-    sleep(3);
     try {
         if(count(explode('.',$domain)) > 2){
             $data = (object)[];
@@ -32,7 +31,8 @@ Route::get('domain-name/check/{domaine}', function (Request $request,$domain) {
             $data = (object)[];
             $data->success = true;
             $data->available = true;
-            $data->message = __('front.Domain name is available');
+            $data->price = 12;
+            $data->message = __('front.Domain name is available').", <strong class=\"text-danger\">".__('front.for')." ".$data->price."$/".__('front.year')."</strong> <small class=\"text-success\">(".__('front.free for first year').")</small>";
             return response()->json($data, 200,$request->header());
         }
 

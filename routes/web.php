@@ -16,13 +16,20 @@ Route::get('/lang/{lang}', [App\Http\Controllers\localeController::class,'setLoc
 
 // Front office
 Route::prefix('/')->group(function () {
-    Route::get('/', function () {return view('front/index');})->name('welcome');
-    Route::get('/project', function () {return view('front/project');})->name('project');
-    Route::get('/demo', function () {return view('front/demo');})->name('demo');
+    Route::get('/', [App\Http\Controllers\front\homeController::class,'index'])->name('home');
+    Route::get('/project/{project:slug}', [App\Http\Controllers\front\projectController::class,'show'])->name('project');
+    Route::get('/projects', [App\Http\Controllers\front\projectController::class,'index'])->name('projects');
+    Route::get('/demo/{demo:slug}', [App\Http\Controllers\front\demoController::class,'show'])->name('demo');
+    Route::get('/demos', [App\Http\Controllers\front\demoController::class,'index'])->name('demos');
+    Route::get('/contact', function () {return view('front.contact');})->name('contact');
+    Route::post('/contact', function () {return view('front.contact');})->name('post-contact');
+    Route::prefix('/blog')->name('blog.')->group(function () {
+        Route::get('/', function () {echo "blog";})->name('home');
+    });
 });
 
 // Back office
-Route::prefix('/dashboard')->group(function () {
+Route::prefix('/dashboard')->name('dashboard.')->group(function () {
     Auth::routes();
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });

@@ -1,5 +1,5 @@
 @extends('front.layout')
-@section('title','Demo')
+@section('title',__('front.Demo'))
 @section('content')
 <main>
     <div class="header-spacer"></div>
@@ -9,44 +9,49 @@
           <div class="col-12 mb-2 col-md-8">
             <div class="page-view shadow-lg">
               <div class="page-holder">
-                <a href="#">
+                <a target="_blank" href="{{ $demo->url }}">
                   <img
                     class="img-fluid"
-                    src="https://webiframe.com/wp-content/uploads/2020/07/screencapture-storluxy-2020-07-25-01_12_31.png"
-                    alt="site title"
+                    src="{{ $demo->full_thumbnail }}"
+                    alt="{{ $demo->title }}"
                   />
                 </a>
               </div>
             </div>
-            <div class="row">
+            <div class="row mb-5">
               <div class="col-6">
-                <a href="#" class="d-block btn-lg shadow-lg btn btn-primary"
-                  >{{ __('front.See website') }}</a
-                >
-              </div>
-              <div class="col-6">
-                <a href="#" class="d-block btn-lg shadow-lg btn btn-success"
-                  >{{ __('front.Mobile version') }}</a
-                >
-              </div>
-              <div class="col-12 mt-3">
-                <a href="#" class="d-block btn-lg shadow-lg btn btn-info"
+                <a target="_blank" href="{{ $demo->url }}" class="d-block btn-lg shadow-lg btn btn-primary"
                   >{{ __('front.Live demo') }}</a
                 >
               </div>
+              {{-- <div class="col-6">
+                <a href="#" class="d-block btn-lg shadow-lg btn btn-success"
+                  >{{ __('front.Mobile version') }}</a
+                >
+              </div> --}}
+              <div class="col-6">
+                <a href="#" data-screenshots="{{ $demo->screenshots }}" class="d-block btn-lg shadow-lg btn btn-success"
+                  >{{ __("front.Screenshots") }}</a
+                >
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <span class="h2">{{ __('front.Full description') }}:</span>
+                    <hr>
+                </div>
+                <div class="col-12">
+                    {!! $demo->full_description !!}
+                </div>
             </div>
           </div>
-          <div class="col-12 mb-2 col-md-4">
+          <div style="position: sticky;top: 100px;" class="col-12 mb-2 col-md-4">
             <div class="site-details">
-              <h1 class="h4">Site e-commerce paiement à la livraison</h1>
+              <h1 class="h4">{{ $demo->title }}</h1>
               <hr />
               <u>{{ __('front.Brief description of the site') }}:</u><br />
               <p class="small">
-                Ce modèle est idéale pour tout site web d'hôtel ou de chambre
-                d'hôte. Attirez l'attention des voyageurs sur vos suites et
-                chambres en insérant vos images sur le slideshow, exposez vos
-                tarifs, vos services et permettez aux internautes de demander
-                des réservations en ligne grâce au formulaire de contact.
+                {{ $demo->short_description }}
               </p>
               <hr />
               <div class="px-2 py-1 border rounded bg-light shadow border-warning form-holder">
@@ -74,7 +79,7 @@
                             />
                         </div>
                         <div class="col-auto form-group p-0">
-                            <select required name="extention" class="form-control rounded-0 border-0">
+                            <select dir="ltr" required name="extention" class="form-control rounded-0 border-0">
                             <option value=".com">.com</option>
                             <option value=".fr">.fr</option>
                             <option value=".ca">.ca</option>
@@ -104,7 +109,7 @@
                     <input type="text" id="your-domain" placeholder="{{ __('front.Your domain name') }}..." style="display: none" class="form-control mb-2 form-control-lg border-dark">
                     </div>
                     <u>{{ __('front.Additional options') }}:</u> <br />
-                    <div class="p-2 border shadow bg-light mb-3">
+                    <div class="p-2 border bg-light mb-3">
                         <div class="form-row">
                         <div class="col-12 form-group">
                             <label for="seo">{{ __('front.SEO web') }}:</label>
@@ -158,28 +163,55 @@
         </div>
       </div>
     </section>
+    <section id="related">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <span class="h3">{{ __('front.Other demos') }}:</span>
+                    {{-- <hr> --}}
+                </div>
+                @foreach ($relatedDemos as $demo)
+                    <div class="col-xs-12 col-sm-12 col-md-4 mb-4">
+                        <div class="bg-light w-100 h-100 rounded shadow-sm overflow-hidden">
+                            <div class="thumbnail">
+                                <a href="{{ route('demo',$demo->slug) }}">
+                                    <img class="img-responsive w-100 h-50" src="{{ $demo->thumbnail }}" alt="{{ $demo->title }}">
+                                </a>
+                            </div>
+                            <div class="details p-3">
+                                <h1 class="h5">{{ $demo->title }}</h1>
+                                <p class="small">{{ $demo->short_description }}</p>
+                            </div>
+                            <a href="{{ route('demo',$demo->slug) }}" class="btn-lg w-100 btn btn-primary rounded-0">{{ __('front.know more') }}</a>
+                        </div>
+                    </div>
+                @endforeach
+                <div class="col-12 text-center mt-3">
+                    <a href="{{ route('demos') }}" class="btn btn-success px-5 btn-lg">{{ __('front.Show All') }}</a>
+                </div>
+            </div>
+        </div>
+      </section>
     <section id="call-to-action" class="text-light">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 text-center mb-3">
-            <h2 class="m-2">Créez un site web à votre image</h2>
-            <p class="m-0">
-              En commandant chez nous, vous bénéficiez de la garantie
-              SATISFAIT OU sur le design de votre site.<br />Facile à prendre
-              en main, moderne et sécurisé.
-            </p>
-          </div>
-          <div class="text-center col-8 mb-5">
-            <form action="/devis.php" method="post">
-              <div class="form-group">
-                <button type="submit" class="btn btn-warning">
-                  Devis online
-                </button>
-              </div>
-            </form>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center mb-3">
+              <h2 class="m-2">{{ __('front.Create a website to your imagination') }}</h2>
+              <p class="m-0">
+                {{ __('front.By ordering from us, you benefit from the SATISFIED OR guarantee on the design of your site') }}.<br />{{ __('front.Easy to learn, modern and secure') }}.
+              </p>
+            </div>
+            <div class="text-center col-8 mb-5">
+              <form action="/devis.php" method="post">
+                <div class="form-group">
+                  <button type="submit" class="btn btn-lg btn-warning">
+                    {{ __('front.online quotation') }}
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   </main>
 @endsection

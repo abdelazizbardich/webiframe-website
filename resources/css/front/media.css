@@ -155,6 +155,20 @@
         display: block;
     }
 }
+@media only screen and (max-width: 768px) {
+    ul.localisation {
+        display: flex;
+    }
+    header nav > ul:nth-child(1) > li:nth-last-child(2){
+        float: left;
+    }
+    header nav > ul:nth-child(1) > li:nth-last-child(1){
+        float: right;
+    }
+    header nav {
+        flex-direction: column;
+    }
+}
 @media only screen and (min-width:426px) and (max-width: 768px) {
     html{
         font-size: 80%;

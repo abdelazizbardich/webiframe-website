@@ -5,28 +5,26 @@
       <div class="header-spacer"></div>
       <section id="project-view">
         <div class="container">
-          <div class="row">
+          <div class="row mb-5">
             <div class="col-12 mb-2">
-              <div class="jumbotron bg-white text-center border-none"><h1 class="h2">Site e-commerce paiement à la livraison</h1></div>
+              <div class="jumbotron bg-white text-center border-none"><h1 class="h2">{{ $project->title }}</h1></div>
               <div class="row p-3 text-center">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quisquam perspiciatis laudantium rem a fugiat tempora totam. Obcaecati, excepturi. Inventore molestiae eligendi officia excepturi dignissimos voluptatem ut, adipisci numquam itaque.
-                </p>
+                <p>{{ $project->short_description }}</p>
               </div>
               <div class="page-view shadow-lg">
                 <div class="page-holder">
-                  <a href="#">
+                  <a target="_blank" href="{{ $project->url }}">
                     <img
                       class="img-fluid"
-                      src="https://webiframe.com/wp-content/uploads/2020/07/screencapture-storluxy-2020-07-25-01_12_31.png"
-                      alt="site title"
+                      src="{{ $project->full_thumbnail }}"
+                      alt="{{ $project->title }}"
                     />
                   </a>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <a href="#" class="d-block btn-lg shadow-lg btn btn-primary"
+                  <a target="_blank" href="{{ $project->url }}" class="d-block btn-lg shadow-lg btn btn-primary"
                     >{{ __('front.See website') }}</a
                   >
                 </div>
@@ -38,6 +36,15 @@
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-12">
+                <span class="h2">{{ __('front.Full description') }}:</span>
+                <hr>
+            </div>
+            <div class="col-12">
+                {!! $project->full_description !!}
+            </div>
+        </div>
         </div>
       </section>
       <section id="call-to-action" class="text-light">
@@ -50,13 +57,11 @@
               </p>
             </div>
             <div class="text-center col-8 mb-5">
-              <form action="/devis.php" method="post">
                 <div class="form-group">
-                  <button type="submit" class="btn btn-warning">
+                  <a type="submit" class="btn btn-lg btn-warning">
                     {{ __('front.online quotation') }}
-                  </button>
+                  </a>
                 </div>
-              </form>
             </div>
           </div>
         </div>

@@ -4,6 +4,12 @@ import axios from '../axios'
 $(document).ready(function(){
     // header scroll controller
     if($(window).scrollTop() > 70){$("header").addClass("bg-w-70");}
+    let currentScroll = $(window).scrollTop();
+        if(currentScroll > 70){
+            $("header").addClass("bg-w-70");
+        }else{
+            $("header").removeClass("bg-w-70");
+        }
     $(window).scroll(function () {
         let currentScroll = $(window).scrollTop();
         if(currentScroll > 70){
@@ -12,16 +18,27 @@ $(document).ready(function(){
             $("header").removeClass("bg-w-70");
         }
     });
-
+    // auto set active class for header nav links
+    let headerNanLinks = document.querySelectorAll("header nav ul:first-child a");
+    headerNanLinks.forEach((headerNanLink)=>{
+        if(headerNanLink.getAttribute('data-title') !== null && headerNanLink.getAttribute('data-title') === headerNanLink.getAttribute('data-current')){
+            headerNanLink.classList.add('active')
+        }
+    })
     // auto scroll to section
-    $("a").click(function(e){
+    $("header nav a").click(function(e){
+        $('header nav a').removeClass('active');
+        let url = $(this);
         let target = $(this).attr('href');
-        if(target.includes("#")){
-            e.preventDefault();
-            console.log($(target));
-            $('html, body').animate({
-                scrollTop: $(target).offset().top-100
-            },500);
+        target = new URL(target)
+        if(target.hash.includes("#")){
+            if(new URL(window.location.href).pathname == target.pathname){
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $(target.hash).offset().top-100
+                },100);
+                url.addClass('active');
+            }
         }
     });
 

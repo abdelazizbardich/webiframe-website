@@ -14,7 +14,7 @@
                         <span class="text-uppercase">{{ __('front.welcome to') }} {{ __('front.'.config('app.name')) }}</span>
                         <hr>
                         <h1 class="h1">{{ __('front.Your website creation agency marrakech') }}</h1>
-                            <a class="btn btn-primary btn-lg mt-3">{{ __('front.Contact us') }}</a>
+                            <a href="{{ route('contact') }}" class="btn btn-primary btn-lg mt-3">{{ __('front.Contact us') }}</a>
                     </div>
                     <div class="d-none d-md-block col"></div>
                 </div>
@@ -105,40 +105,69 @@
                             <div class="exp">
                                 <p class="m-0">{{ __('front.Website development and creation') }}</p>
                                 <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70"
-                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        <span class="sr-only">70% {{ __('front.Complete') }}</span>
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                        <span class="sr-only">90% {{ __('front.Complete') }}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="exp">
                                 <p class="m-0">{{ __('front.Mobile application development') }}</p>
                                 <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70"
-                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        <span class="sr-only">70% {{ __('front.Complete') }}</span>
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                        <span class="sr-only">90% {{ __('front.Complete') }}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="exp">
                                 <p class="m-0">{{ __('front.SEO Analysis and Referencing') }}</p>
                                 <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70"
-                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        <span class="sr-only">70% {{ __('front.Complete') }}</span>
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                        <span class="sr-only">90% {{ __('front.Complete') }}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="exp">
                                 <p class="m-0">{{ __('front.Social media management') }}</p>
                                 <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70"
-                                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        <span class="sr-only">70% {{ __('front.Complete') }}</span>
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                        <span class="sr-only">90% {{ __('front.Complete') }}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="our-demos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="m-2">{{ __('front.Our demo sites') }}</h2>
+                        <p class="m-0">{{ __('front.We are creating many site demos that fits every business needs') }}.</p>
+                    </div>
+                    @foreach ($demos as $demo)
+                        <div class="col-xs-12 col-sm-12 col-md-4 mb-4">
+                            <div class="bg-light w-100 h-100 rounded shadow-sm overflow-hidden">
+                                <div class="thumbnail">
+                                    <a href="{{ route('demo',$demo->slug) }}">
+                                        <img class="img-responsive w-100 h-50" src="{{ $demo->thumbnail }}" alt="{{ $demo->title }}">
+                                    </a>
+                                </div>
+                                <div class="details p-3">
+                                    <h1 class="h5">{{ $demo->title }}</h1>
+                                    <p class="small">{{ $demo->short_description }}</p>
+                                </div>
+                                <a href="{{ route('demo',$demo->slug) }}" class="btn-lg w-100 btn btn-primary rounded-0">{{ __('front.know more') }}</a>
+                            </div>
+                        </div>
+                    @endforeach
+                    <div class="col-12 text-center">
+                        <a href="{{ route('demos') }}" class="btn btn-primary  px-5 btn-lg">{{ __('front.Show more +') }}</a>
                     </div>
                 </div>
             </div>
@@ -152,51 +181,18 @@
                         <p>{{ __('front.We design awesome stuff') }}</p>
                     </div>
                     <div class="projects col-12 mb-5">
-                        <div class="project shadow">
-                            <a href="{{ route('project') }}"><img class="img-fluid" src="{{ asset('images/Site-nozha-par-webiframe-540x540.jpg')}}" alt=""></a>
-                            <div class="project-detail p-2">
-                                <a href="{{ route('project') }}"><p class="m-0 border-bottom p-2">Nozha.ma</p></a>
-                                <p class="p-2 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, magni. Quis earum, quibusdam temporibus facilis modi cum deleniti laudantium quas! Nam dignissimos consequatur accusantium quaerat eligendi, nemo exercitationem nihil amet!</p>
+                        @foreach ($projects as $project)
+                            <div class="project shadow">
+                                <a href="{{ route('project',$project->slug) }}"><img class="img-fluid" src="{{ $project->thumbnail }}" alt="{{ $project->title }}"></a>
+                                <div class="project-detail p-2">
+                                    <a href="{{ route('project',$project->slug) }}"><p class="m-0 border-bottom p-2">{{ $project->title }}</p></a>
+                                    <p class="p-2 small">{{ $project->short_description }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="project shadow">
-                            <a href="{{ route('project') }}"><img class="img-fluid" src="{{ asset('images/storluxy-540x540.jpg')}}" alt=""></a>
-                            <div class="project-detail p-2">
-                                <a href="{{ route('project') }}"><p class="m-0 border-bottom p-2">Storluxy.com: Site e-commerce de paiement à la livraison</p></a>
-                                <p class="p-2 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, magni. Quis earum, quibusdam temporibus facilis modi cum deleniti laudantium quas! Nam dignissimos consequatur accusantium quaerat eligendi, nemo exercitationem nihil amet!</p>
-                            </div>
-                        </div>
-                        <div class="project shadow">
-                            <a href="{{ route('project') }}"><img class="img-fluid" src="{{ asset('images/ilaikom-540x540.jpg')}}" alt=""></a>
-                            <div class="project-detail p-2">
-                                <a href="{{ route('project') }}"><p class="m-0 border-bottom p-2">Ilaikom: site e-commerece wordpress</p></a>
-                                <p class="p-2 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, magni. Quis earum, quibusdam temporibus facilis modi cum deleniti laudantium quas! Nam dignissimos consequatur accusantium quaerat eligendi, nemo exercitationem nihil amet!</p>
-                            </div>
-                        </div>
-                        <div class="project shadow">
-                            <a href="{{ route('project') }}"><img class="img-fluid" src="{{ asset('images/Neuline-540x540.jpg')}}" alt=""></a>
-                            <div class="project-detail p-2">
-                                <a href="{{ route('project') }}"><p class="m-0 border-bottom p-2">Neuline: Thème wordpress multi-langues</p></a>
-                                <p class="p-2 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, magni. Quis earum, quibusdam temporibus facilis modi cum deleniti laudantium quas! Nam dignissimos consequatur accusantium quaerat eligendi, nemo exercitationem nihil amet!</p>
-                            </div>
-                        </div>
-                        <div class="project shadow">
-                            <a href="{{ route('project') }}"><img class="img-fluid" src="{{ asset('images/Stock-Management-540x540.jpg')}}" alt=""></a>
-                            <div class="project-detail p-2">
-                                <a href="{{ route('project') }}"><p class="m-0 border-bottom p-2">Stock Gardien: Système de gestion des stocks</p></a>
-                                <p class="p-2 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, magni. Quis earum, quibusdam temporibus facilis modi cum deleniti laudantium quas! Nam dignissimos consequatur accusantium quaerat eligendi, nemo exercitationem nihil amet!</p>
-                            </div>
-                        </div>
-                        <div class="project shadow">
-                            <a href="{{ route('project') }}"><img class="img-fluid" src="{{ asset('images/thedetrend-thumbnail-540x540.jpg')}}" alt=""></a>
-                            <div class="project-detail p-2">
-                                <a href="{{ route('project') }}"><p class="m-0 border-bottom p-2">Thedetrend: Blog d’actualité mondiale</p></a>
-                                <p class="p-2 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, magni. Quis earum, quibusdam temporibus facilis modi cum deleniti laudantium quas! Nam dignissimos consequatur accusantium quaerat eligendi, nemo exercitationem nihil amet!</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn btn-primary btn-lg">{{ __('front.Show more +') }}</button>
+                        <a href="{{ route('projects') }}" class="btn btn-primary  px-5 btn-lg">{{ __('front.Show more +') }}</a>
                     </div>
                 </div>
             </div>
@@ -265,7 +261,7 @@
                 </div>
             </div>
         </section>
-        <section id="audit" class="d-none d-md-block text-dark mt-2">
+        <section id="audit" class="d-none d-md-block text-light mt-2">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 text-center mb-3">
@@ -278,7 +274,7 @@
                                 <input type="url" class="form-control form-control-lg bg-white border-dark mb-3" name="website" placeholder="{{ __('front.Enter your website link') }}..." />
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-lg w-25">{{ __('Send') }}</button>
+                                <button type="submit" class="btn btn-primary btn-lg w-25">{{ __('front.Send') }}</button>
                             </div>
                         </form>
                     </div>
