@@ -21,8 +21,8 @@ Route::prefix('/')->group(function () {
     Route::get('/projects', [App\Http\Controllers\front\projectController::class,'index'])->name('projects');
     Route::get('/demo/{demo:slug}', [App\Http\Controllers\front\demoController::class,'show'])->name('demo');
     Route::get('/demos', [App\Http\Controllers\front\demoController::class,'index'])->name('demos');
-    Route::get('/contact', function () {return view('front.contact');})->name('contact');
-    Route::post('/contact', function () {return view('front.contact');})->name('post-contact');
+    Route::get('/contact', [App\Http\Controllers\front\contactController::class,'index'])->name('contact');
+    Route::post('/contact', [App\Http\Controllers\front\contactController::class,'store'])->name('post-contact');
     Route::prefix('/blog')->name('blog.')->group(function () {
         Route::get('/', function () {echo "blog";})->name('home');
     });

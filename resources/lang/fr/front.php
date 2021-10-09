@@ -144,14 +144,6 @@ return [
     "Other demos" => "D'autres démos",
     "More +" => "Plus +",
     "Show All" => "Afficher tout",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => "",
-    "" => ""
+    "cannot send message" => "Impossible d'envoyer le message",
+    "message sent successfully" => "Message envoyé avec succès"
 ];
