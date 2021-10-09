@@ -23,6 +23,8 @@ Route::prefix('/')->group(function () {
     Route::get('/demos', [App\Http\Controllers\front\demoController::class,'index'])->name('demos');
     Route::get('/contact', [App\Http\Controllers\front\contactController::class,'index'])->name('contact');
     Route::post('/contact', [App\Http\Controllers\front\contactController::class,'store'])->name('post-contact');
+    Route::get('/quotation',[App\Http\Controllers\front\quotationController::class,'index'])->name('cote');
+    Route::post('/quotation',[App\Http\Controllers\front\quotationController::class,'store'])->name('post-cote');
     Route::prefix('/blog')->name('blog.')->group(function () {
         Route::get('/', function () {echo "blog";})->name('home');
     });

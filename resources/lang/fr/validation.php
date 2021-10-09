@@ -161,5 +161,10 @@ return [
         "subject_type" => "Type de sujet",
         "subject" => "Sujet",
         "message" => "Message",
+        "first_last_name" => "Nom et prénom",
+        "who_you_are" => "Qui êtes-vous",
+        "your_need" => "Votre besoin",
+        "due_date" => "date d'échéance",
+        "approximate_budget" => "budget approximatif",
     ],
 ];

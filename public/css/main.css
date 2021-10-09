@@ -16802,6 +16802,9 @@ footer{
 .rtl body{
     font-family: "Tajawal";
 }
+.rtl body *:not(i) {
+    font-family: "Tajawal";
+}
 .rtl section#home::before,.rtl section#experiences::before {
     left: 0;
     right: auto;
