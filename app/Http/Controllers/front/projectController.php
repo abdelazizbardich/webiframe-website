@@ -51,7 +51,7 @@ class projectController extends Controller
     public function show(Project $project)
     {
         $data = [
-            "project" => $project->with(['category'])->first()
+            "project" => $project->where('id',$project->id)->with(['category'])->first()
         ];
         return view('front.project',$data);
 

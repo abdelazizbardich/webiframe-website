@@ -52,7 +52,7 @@ class demoController extends Controller
     public function show(Demo $demo)
     {
         $data = [
-            "demo" => $demo->with(['category'])->first(),
+            "demo" => $demo->where('id',$demo->id)->with(['category'])->first(),
             "relatedDemos" => Demo::where('category_id',$demo->category->id)->orderBy('id',"DESC")->limit(3)->get()
         ];
         return view('front.demo',$data);
