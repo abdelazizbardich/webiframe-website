@@ -29,7 +29,7 @@
                   >
                 </div>
                 <div class="col-6">
-                  <a href="#" class="d-block btn-lg shadow-lg btn btn-success"
+                  <a href="{{ route('demos') }}" class="d-block btn-lg shadow-lg btn btn-success"
                     >{{ __('front.Create my website') }}</a
                   >
                 </div>

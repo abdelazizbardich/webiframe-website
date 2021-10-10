@@ -219,7 +219,7 @@
                                 <li>{{ __('front.Professional emails') }}</li>
                             </ul>
                             <div class="col-12">
-                                <a href="#" class="btn btn-warning btn-lg w-75 mb-5">{{ __('front.Get started') }}</a>
+                                <a href="{{ route('quotation') }}" class="btn btn-warning btn-lg w-75 mb-5">{{ __('front.Get started') }}</a>
                             </div>
                         </div>
                         <div class="offer bg-danger text-light border">
@@ -237,7 +237,7 @@
                                 <li>{{ __('front.Professional emails') }}</li>
                             </ul>
                             <div class="col-12">
-                                <a href="#" class="btn btn-light btn-lg w-75 mb-5">{{ __('front.Get started') }}</a>
+                                <a href="{{ route('quotation') }}" class="btn btn-light btn-lg w-75 mb-5">{{ __('front.Get started') }}</a>
                             </div>
                         </div>
                         <div class="offer bg-success text-light border">
@@ -254,7 +254,7 @@
                                 <li>{{ __('front.Professional emails') }}</li>
                             </ul>
                             <div class="col-12">
-                                <a href="#" class="btn btn-warning btn-lg w-75 mb-5">{{ __('front.Get started') }}</a>
+                                <a href="{{ route('quotation') }}" class="btn btn-warning btn-lg w-75 mb-5">{{ __('front.Get started') }}</a>
                             </div>
                         </div>
                     </div>
@@ -269,9 +269,23 @@
                         <p class="m-0">{{ __('front.We offer a free SEO audit for your website, so you can find the weak spots and how to improve them') }}.</p>
                     </div>
                     <div class="text-center col-8 mb-5">
-                        <form action="/" method="post">
-                            <div class="form-group">
-                                <input type="url" class="form-control form-control-lg bg-white border-dark mb-3" name="website" placeholder="{{ __('front.Enter your website link') }}..." />
+                        @isset($auditSuccess)
+                                <div class="aler alert-success py-3 px-5 rounded shadow-sm">
+                                    {{ $auditSuccess }}
+                                </div>
+                        @endisset
+                        @isset($auditError)
+                                <div class="aler alert-danger py-3 px-5 rounded shadow-sm">
+                                    {{ $auditError }}
+                                </div>
+                        @endisset
+                        <form action="{{ route('post-audit') }}" method="post">
+                            @csrf
+                            <div class="form-group mb-3">
+                                <input value="{{ old('website') }}" type="text" id="website" class="@error('website') is-invalid @enderror form-control form-control-lg bg-white border-dark" name="website" placeholder="{{ __('front.Enter your website link') }}..." />
+                                @error('website')
+                                    <div class="small text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-lg w-25">{{ __('front.Send') }}</button>

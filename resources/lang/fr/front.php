@@ -164,7 +164,9 @@ return [
     "Your approximate budget in MAD" => "Votre budget approximatif en MAD",
     "Request successfully received, we will contact you as soon as possible" => "Demande reçue avec succès, nous vous contacterons dans les plus brefs délais",
     "cannot send the request" => "Impossible d'envoyer la demande",
-    "" => "",
-    "" => "",
-    "" => "",
+    "cannot send!" => "Ne peut pas être envoyé!",
+    "website sent successfully" => "Site envoyé avec succès",
+    "website" => "Site web",
+    "order sent successfully" => "Commande envoyée avec succès",
+    "cannot send order" => "Impossible d'envoyer la commande",
 ];

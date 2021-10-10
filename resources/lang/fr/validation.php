@@ -166,5 +166,6 @@ return [
         "your_need" => "Votre besoin",
         "due_date" => "date d'échéance",
         "approximate_budget" => "budget approximatif",
+        "website" => "Site web",
     ],
 ];

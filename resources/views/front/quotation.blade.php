@@ -24,7 +24,7 @@
                     </div>
                 @endisset
                 <div class="col-12">
-                    <form class="border rounded shadow p-3 mt-3" action="{{ route('post-cote') }}" method="post">
+                    <form class="border rounded shadow p-3 mt-3" action="{{ route('post-quotation') }}" method="post">
                         @csrf
                         <div class="row m-0">
                             <div class="form-group mb-3 col-md-6">

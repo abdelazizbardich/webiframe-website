@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('domain-name/check/{domaine}', function (Request $request,$domain) {
     try {
-        if(count(explode('.',$domain)) > 2){
+        if(count(explode('.',$domain)) > 2 || !preg_match('/^(?:[-A-Za-z0-9]+\.)+[A-Za-z]{2,6}$/',$domain)){
             $data = (object)[];
             $data->success = true;
             $data->available = false;

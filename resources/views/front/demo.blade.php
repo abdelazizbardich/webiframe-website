@@ -6,6 +6,20 @@
     <section id="project-view">
       <div class="container">
         <div class="row">
+            @if (\Session::has('orderSuccess'))
+                <div class="col-12 mb-2 col-md-8">
+                    <div class="alert alert-success">
+                        {!! \Session::get('orderSuccess') !!}
+                    </div>
+                </div>
+            @endif
+            @if (\Session::has('orderError'))
+                <div class="col-12 mb-2 col-md-8">
+                    <div class="alert alert-danger">
+                        {!! \Session::get('orderError') !!}
+                    </div>
+                </div>
+            @endif
           <div class="col-12 mb-2 col-md-8">
             <div class="page-view shadow-lg">
               <div class="page-holder">
@@ -24,13 +38,8 @@
                   >{{ __('front.Live demo') }}</a
                 >
               </div>
-              {{-- <div class="col-6">
-                <a href="#" class="d-block btn-lg shadow-lg btn btn-success"
-                  >{{ __('front.Mobile version') }}</a
-                >
-              </div> --}}
               <div class="col-6">
-                <a href="#" data-screenshots="{{ $demo->screenshots }}" class="d-block btn-lg shadow-lg btn btn-success"
+                <a href="javascript:void(0)" data-screenshots="{{ $demo->screenshots }}" class="d-block btn-lg shadow-lg btn btn-success"
                   >{{ __("front.Screenshots") }}</a
                 >
               </div>
@@ -55,7 +64,9 @@
               </p>
               <hr />
               <div class="px-2 py-1 border rounded bg-light shadow border-warning form-holder">
-                <form action="./order.php" method="post">
+                <form action="{{ route('post-order') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="demo_id" value="{{ $demo->id }}">
                     <u>{{ __('front.Domain name') }}:</u> <br />
                     <div>
                     <p class="small">
@@ -64,7 +75,7 @@
                     </div>
                     <div>
                         <div class="d-flex mb-3">
-                            <input class="form-check" type="checkbox" name="full-domain" id="i-have-mine">
+                            <input class="form-check" type="checkbox" name="have_mine" id="i-have-mine">
                             <label class="mx-2" for="i-have-mine">{{ __('front.I have my own domain') }}</label>
                         </div>
                     <div id="check-for-domain-from">
@@ -73,13 +84,12 @@
                             <input
                             type="text"
                             name="domain"
-                            required
                             class="form-control rounded-0 border-0"
                             placeholder="{{ __('front.Your chosen domain name') }}..."
                             />
                         </div>
                         <div class="col-auto form-group p-0">
-                            <select dir="ltr" required name="extention" class="form-control rounded-0 border-0">
+                            <select dir="ltr" name="extention" class="form-control rounded-0 border-0">
                             <option value=".com">.com</option>
                             <option value=".fr">.fr</option>
                             <option value=".ca">.ca</option>
@@ -106,7 +116,7 @@
                                 <i class="fas fa-ban"></i> <span>{{ __('front.Domain unavailable') }}</span>
                             </div>
                     </div>
-                    <input type="text" id="your-domain" placeholder="{{ __('front.Your domain name') }}..." style="display: none" class="form-control mb-2 form-control-lg border-dark">
+                    <input required type="text" name="full_domain" id="your-domain" placeholder="{{ __('front.Your domain name') }}..." style="display: none" class="form-control mb-2 form-control-lg border-dark">
                     </div>
                     <u>{{ __('front.Additional options') }}:</u> <br />
                     <div class="p-2 border bg-light mb-3">
@@ -114,25 +124,25 @@
                         <div class="col-12 form-group">
                             <label for="seo">{{ __('front.SEO web') }}:</label>
                             <select name="seo" class="form-control" id="seo">
-                            <option value="s">{{ __('front.Standard') }}: {{ __('front.No additional cost') }}</option>
-                            <option value="p">{{ __('front.Premium') }}: 2000dh</option>
+                            <option value="Standard">{{ __('front.Standard') }}: {{ __('front.No additional cost') }}</option>
+                            <option value="Premium">{{ __('front.Premium') }}: 2000dh</option>
                             </select>
                         </div>
                         <div class="col-12 form-group">
                             <label for="lang">{{ __('front.Website language') }}:</label>
                             <select name="lang" class="form-control" id="lang">
-                            <option value="fr">{{ __('front.French') }}: {{ __('front.No additional cost') }}</option>
-                            <option value="en">{{ __('front.English') }}: {{ __('front.No additional cost') }}</option>
-                            <option value="ar">{{ __('front.Arab') }}: {{ __('front.No additional cost') }}</option>
+                            <option value="French">{{ __('front.French') }}: {{ __('front.No additional cost') }}</option>
+                            <option value="English">{{ __('front.English') }}: {{ __('front.No additional cost') }}</option>
+                            <option value="Arab">{{ __('front.Arab') }}: {{ __('front.No additional cost') }}</option>
                             </select>
                         </div>
                         <div class="col-12 form-group">
                             <label for="s-lang">{{ __('front.Second language') }}:</label>
-                            <select name="s-lang" class="form-control" id="s-lang">
-                            <option value="s">{{ __('front.None') }}: {{ __('front.No additional cost') }}</option>
-                            <option value="fr">{{ __('front.French') }}: 2000dh</option>
-                            <option value="an">{{ __('front.English') }}: 2000dh</option>
-                            <option value="ar">{{ __('front.Arab') }}: 2000dh</option>
+                            <select name="s_lang" class="form-control" id="s-lang">
+                            <option value="None">{{ __('front.None') }}: {{ __('front.No additional cost') }}</option>
+                            <option value="French">{{ __('front.French') }}: 2000dh</option>
+                            <option value="English">{{ __('front.English') }}: 2000dh</option>
+                            <option value="Arab">{{ __('front.Arab') }}: 2000dh</option>
                             </select>
                         </div>
                         <div class="col-12 form-group">
@@ -202,7 +212,7 @@
               </p>
             </div>
             <div class="text-center col-8 mb-5">
-              <form action="/devis.php" method="post">
+              <form action="{{ route('quotation') }}" method="get">
                 <div class="form-group">
                   <button type="submit" class="btn btn-lg btn-warning">
                     {{ __('front.online quotation') }}
