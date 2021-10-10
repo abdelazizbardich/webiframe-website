@@ -167,5 +167,6 @@ return [
         "due_date" => "date d'échéance",
         "approximate_budget" => "budget approximatif",
         "website" => "Site web",
+        "full_domain" => "Nom de domaine",
     ],
 ];

@@ -52,12 +52,43 @@ class orderController extends Controller
             "s_lang" => $request->s_lang,
             "newsletter" => $request->newsletter,
         ]);
+        $order = $order->where('id',$order->id)->with(['demo'])->first();
         if($order){
-            return redirect()->back()->with(["orderSuccess" => __('front.order sent successfully')]);
+            return view('front.finish-order',compact('order'));
         }else{
             return redirect()->back()->with(["orderError" => __('front.cannot send order')]);
         }
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Order  $order
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function confirm(Request  $request,Order $order){
+        $request->validate([
+            "first_last_name" => "required",
+            "who_you_are" => "required",
+            "email" => "required",
+            "phone" => "required|min:9",
+            "approximate_budget" => "required",
+            "due_date" => "required",
+            "message" => "required"
+        ]);
+        $order->update([
+            "first_last_name" => $request->first_last_name,
+            "who_you_are" => $request->who_you_are,
+            "email" => $request->email,
+            "phone" => $request->phone,
+            "approximate_budget" => $request->approximate_budget,
+            "due_date" => $request->due_date,
+            "message" => $request->message,
+        ]);
+        return view('front.order-confirmed',$order);
+    }
+
 
     /**
      * Display the specified resource.

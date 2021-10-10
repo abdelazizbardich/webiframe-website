@@ -169,4 +169,9 @@ return [
     "website" => "Site web",
     "order sent successfully" => "Commande envoyée avec succès",
     "cannot send order" => "Impossible d'envoyer la commande",
+    "finish order" => "Terminer la commande",
+    "Your order details have been saved, please complete the form below with your contact details so that we can contact you and confirm your order with you" => "Les détails de votre commande ont été enregistrés, veuillez remplir le formulaire ci-dessous avec vos coordonnées afin que nous puissions vous contacter et confirmer votre commande avec vous",
+    "order confirmed" => "Commande confirmée",
+    "We received your order and you contact information.<br>we will contact you to confirm your order as soon as possible" => "Nous avons reçu votre commande et vos coordonnées.<br>nous vous contacterons pour confirmer votre commande dans les plus brefs délais",
+    "Go to home page" => "Aller à la page d'accueil"
 ];

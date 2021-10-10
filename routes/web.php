@@ -27,6 +27,7 @@ Route::prefix('/')->group(function () {
     Route::post('/quotation',[App\Http\Controllers\front\quotationController::class,'store'])->name('post-quotation');
     Route::post('/audit',[App\Http\Controllers\front\auditController::class,'store'])->name('post-audit');
     Route::post('/order',[App\Http\Controllers\front\orderController::class,'store'])->name('post-order');
+    Route::post('/order/confirmed/{order:id}',[App\Http\Controllers\front\orderController::class,'confirm'])->name('post-order-confirmed');
     // Route::prefix('/blog')->name('blog.')->group(function () {
     //     Route::get('/', function () {echo "blog";})->name('home');
     // });

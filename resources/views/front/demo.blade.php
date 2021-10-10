@@ -44,7 +44,7 @@
                 >
               </div>
             </div>
-            <div class="row">
+            <div class="row d-none d-md-block">
                 <div class="col-12">
                     <span class="h2">{{ __('front.Full description') }}:</span>
                     <hr>
@@ -64,6 +64,15 @@
               </p>
               <hr />
               <div class="px-2 py-1 border rounded bg-light shadow border-warning form-holder">
+                @if ($errors->any())
+                    <div class="alert alert-danger p-2">
+                        <ul class="m-0">
+                            @foreach ($errors->all() as $error)
+                                <li class="m-0">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form action="{{ route('post-order') }}" method="post">
                     @csrf
                     <input type="hidden" name="demo_id" value="{{ $demo->id }}">
@@ -84,7 +93,7 @@
                             <input
                             type="text"
                             name="domain"
-                            class="form-control rounded-0 border-0"
+                            class="form-control rounded-0 @error('full_domain') is-invalid @enderror"
                             placeholder="{{ __('front.Your chosen domain name') }}..."
                             />
                         </div>
@@ -116,7 +125,7 @@
                                 <i class="fas fa-ban"></i> <span>{{ __('front.Domain unavailable') }}</span>
                             </div>
                     </div>
-                    <input required type="text" name="full_domain" id="your-domain" placeholder="{{ __('front.Your domain name') }}..." style="display: none" class="form-control mb-2 form-control-lg border-dark">
+                    <input type="text" name="full_domain" id="your-domain" placeholder="{{ __('front.Your domain name') }}..." style="display: none" class="@error('full_domain') is-invalid @enderror form-control mb-2 form-control-lg">
                     </div>
                     <u>{{ __('front.Additional options') }}:</u> <br />
                     <div class="p-2 border bg-light mb-3">
@@ -131,18 +140,18 @@
                         <div class="col-12 form-group">
                             <label for="lang">{{ __('front.Website language') }}:</label>
                             <select name="lang" class="form-control" id="lang">
-                            <option value="French">{{ __('front.French') }}: {{ __('front.No additional cost') }}</option>
-                            <option value="English">{{ __('front.English') }}: {{ __('front.No additional cost') }}</option>
-                            <option value="Arab">{{ __('front.Arab') }}: {{ __('front.No additional cost') }}</option>
+                                <option value="French">{{ __('front.French') }}: {{ __('front.No additional cost') }}</option>
+                                <option value="English">{{ __('front.English') }}: {{ __('front.No additional cost') }}</option>
+                                <option value="Arab">{{ __('front.Arab') }}: {{ __('front.No additional cost') }}</option>
                             </select>
                         </div>
                         <div class="col-12 form-group">
                             <label for="s-lang">{{ __('front.Second language') }}:</label>
                             <select name="s_lang" class="form-control" id="s-lang">
-                            <option value="None">{{ __('front.None') }}: {{ __('front.No additional cost') }}</option>
-                            <option value="French">{{ __('front.French') }}: 2000dh</option>
-                            <option value="English">{{ __('front.English') }}: 2000dh</option>
-                            <option value="Arab">{{ __('front.Arab') }}: 2000dh</option>
+                                <option value="None">{{ __('front.None') }}: {{ __('front.No additional cost') }}</option>
+                                <option value="French">{{ __('front.French') }}: 2000dh</option>
+                                <option value="English">{{ __('front.English') }}: 2000dh</option>
+                                <option value="Arab">{{ __('front.Arab') }}: 2000dh</option>
                             </select>
                         </div>
                         <div class="col-12 form-group">
@@ -152,10 +161,10 @@
                             class="form-control"
                             id="newsletter"
                             >
-                            <option value="s">
+                            <option value="Without Newsletter">
                                 {{ __('front.Without Newsletter') }}: {{ __('front.No additional cost') }}
                             </option>
-                            <option value="a">{{ __('front.With Newsletter') }}: 2000dh</option>
+                            <option value="With Newsletter">{{ __('front.With Newsletter') }}: 2000dh</option>
                             </select>
                         </div>
                         <div class="col-12 form-group mt-3">

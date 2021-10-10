@@ -21,6 +21,14 @@ class CreateOrdersTable extends Migration
             $table->string('f_lang', 100)->nullable()->default('...')->comment('first language');
             $table->string('s_lang', 100)->nullable()->default('...')->comment('second language');;
             $table->string('newsletter', 100)->nullable()->default('...');
+            $table->integer('code')->default(0);
+            $table->string('first_last_name', 100)->nullable()->default('...');
+            $table->string('who_you_are', 100)->nullable()->default('...');
+            $table->string('email', 100)->nullable()->default('...');
+            $table->string('phone', 100)->nullable()->default('...');
+            $table->string('approximate_budget', 100)->nullable()->default('...');
+            $table->string('due_date', 100)->nullable()->default('...');
+            $table->string('message', 100)->nullable()->default('...');
             $table->timestamps();
             $table->index('demo_id');
             $table->foreign('demo_id')->references('id')->on('demos')->onDelete('cascade');
