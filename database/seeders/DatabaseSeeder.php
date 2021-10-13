@@ -14,9 +14,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            CategorySeeder::class,
-            ProjectSeeder::class,
-            DemoSeeder::class
+            // CategorySeeder::class,
+            // ProjectSeeder::class,
+            // DemoSeeder::class
         ]);
         \App\Models\User::create([
             "name" => "abdelaziz bardich",

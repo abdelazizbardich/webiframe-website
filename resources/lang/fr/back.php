@@ -22,4 +22,9 @@ return [
     "full thumbnail" => "Miniature complète",
     "url" => "URL",
     "category" => "Catégorie",
+    "categories" => "Catégories",
+    "id" => "#",
+    "New Demo" => "Nouvelle démo",
+    "New project" => "Nouveau projet",
+    "screenshots" => "Captures d'écran"
 ];

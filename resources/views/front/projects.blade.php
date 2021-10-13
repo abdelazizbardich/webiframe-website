@@ -13,7 +13,7 @@
                     <div class="projects col-12 mb-5">
                         @foreach ($projects as $project)
                             <div class="project shadow">
-                                <a href="{{ route('project',$project->slug) }}"><img class="img-fluid" src="{{ $project->thumbnail }}" alt="{{ $project->title }}"></a>
+                                <a href="{{ route('project',$project->slug) }}"><img class="img-fluid" src="{{ asset('storage/'.$project->thumbnail) }}" alt="{{ $project->title }}"></a>
                                 <div class="project-detail p-2">
                                     <a href="{{ route('project',$project->slug) }}"><p class="m-0 border-bottom p-2">{{ $project->title }}</p></a>
                                     <p class="p-2 small">{{ $project->short_description }}</p>

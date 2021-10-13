@@ -9,6 +9,17 @@ class Project extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "title",
+        "slug",
+        "short_description",
+        "full_description",
+        "thumbnail",
+        "full_thumbnail",
+        "url",
+        "category_id"
+    ];
+
 
     /**
      * Get the Category that owns the Project

@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="row m-0">
-        <div class="col-12"><h1 class="display-5 fw-bold">Projects</h1></div>
+        <div class="col-12"><h1 class="display-5 fw-bold">Create demo</h1></div>
         <div class="col-12">
             @if (count($categories) > 0)
-            <form action="{{ route('dashboard.project.store') }}" enctype="multipart/form-data" method="POST" class="p-2 rounded shadow bg-light border">
+            <form action="{{ route('dashboard.demo.store') }}" enctype="multipart/form-data" method="POST" class="p-2 rounded shadow bg-light border">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -28,13 +28,17 @@
                      <textarea cols="30" rows="5" name="short_description" id="short-description" placeholder="{{ __('back.short description') }}" class="form-control form-control-lg"></textarea>
                  </div>
                  <div class="row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-4">
                         <label for="thumbnail">{{ __('back.thumbnail') }}:</label>
                         <input type="file" name="thumbnail" id="thumbnail" placeholder="{{ __('back.thumbnail') }}" class="form-control form-control-lg">
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-4">
                         <label for="full-thumbnail">{{ __('back.full thumbnail') }}:</label>
                         <input type="file" name="full_thumbnail" id="full-thumbnail" placeholder="{{ __('back.full thumbnail') }}" class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="screenshots">{{ __('back.screenshots') }}:</label>
+                        <input type="file" name="screenshots[]" multiple id="screenshots" placeholder="{{ __('back.screenshots') }}" class="form-control form-control-lg">
                     </div>
                  </div>
                  <div class="row">
@@ -59,14 +63,6 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary my-2 w-100 btn-lg">Publish</button>
                 </div>
-
-
-
-
-
-
-
-
             </form>
             @else
             <div class="div alert alert-danger">

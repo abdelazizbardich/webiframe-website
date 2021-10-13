@@ -16,7 +16,7 @@
                   <a target="_blank" href="{{ $project->url }}">
                     <img
                       class="img-fluid"
-                      src="{{ $project->full_thumbnail }}"
+                      src="{{ asset('storage/'.$project->full_thumbnail) }}"
                       alt="{{ $project->title }}"
                     />
                   </a>

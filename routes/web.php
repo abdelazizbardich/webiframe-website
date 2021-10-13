@@ -37,20 +37,28 @@ Route::prefix('/')->group(function () {
 Auth::routes(['register' => false]);
 Route::prefix('/dashboard')->name('dashboard.')->group(function () {
     Route::get('/', [App\Http\Controllers\back\HomeController::class, 'index'])->name('home');
-    Route::get('/posts', [App\Http\Controllers\back\postsController::class, 'index'])->name('posts');
+    Route::get('/posts', [App\Http\Controllers\back\postsController::class, 'index'])->name('posts.all');
     Route::prefix('/project')->name('project.')->group(function () {
-        Route::get('/al', [App\Http\Controllers\back\projectController::class, 'index'])->name('all');
+        Route::get('/all', [App\Http\Controllers\back\projectController::class, 'index'])->name('all');
         Route::get('/create', [App\Http\Controllers\back\projectController::class, 'create'])->name('create');
-        Route::get('/save', [App\Http\Controllers\back\projectController::class, 'store'])->name('store');
+        Route::post('/save', [App\Http\Controllers\back\projectController::class, 'store'])->name('store');
+        Route::get('/delete', [App\Http\Controllers\back\projectController::class, 'delete'])->name('delete');
+    });
+    Route::prefix('/categories')->name('categories.')->group(function () {
+        Route::get('/all', [App\Http\Controllers\back\categoryController::class, 'index'])->name('all');
+        Route::get('/create', [App\Http\Controllers\back\categoryController::class, 'create'])->name('create');
+        Route::post('/save', [App\Http\Controllers\back\categoryController::class, 'store'])->name('store');
+        Route::get('/delete', [App\Http\Controllers\back\categoryController::class, 'delete'])->name('delete');
     });
     Route::prefix('/demo')->name('demo.')->group(function () {
         Route::get('/all', [App\Http\Controllers\back\demoController::class, 'index'])->name('all');
         Route::get('/create', [App\Http\Controllers\back\demoController::class, 'create'])->name('create');
-        Route::get('/save', [App\Http\Controllers\back\demoController::class, 'store'])->name('store');
+        Route::post('/save', [App\Http\Controllers\back\demoController::class, 'store'])->name('store');
+        Route::post('/delete', [App\Http\Controllers\back\demoController::class, 'delete'])->name('delete');
     });
-    Route::get('/orders', [App\Http\Controllers\back\orderController::class, 'index'])->name('orders');
-    Route::get('/quotations', [App\Http\Controllers\back\quotationController::class, 'index'])->name('quotations');
-    Route::get('/contacts', [App\Http\Controllers\back\contactController::class, 'index'])->name('contacts');
+    Route::get('/orders', [App\Http\Controllers\back\orderController::class, 'index'])->name('orders.all');
+    Route::get('/quotations', [App\Http\Controllers\back\quotationController::class, 'index'])->name('quotations.all');
+    Route::get('/contacts', [App\Http\Controllers\back\contactController::class, 'index'])->name('contacts.all');
 });
 
 

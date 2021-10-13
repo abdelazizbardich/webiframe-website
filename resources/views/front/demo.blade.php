@@ -26,7 +26,8 @@
                 <a target="_blank" href="{{ $demo->url }}">
                   <img
                     class="img-fluid"
-                    src="{{ $demo->full_thumbnail }}"
+                    src="{{ asset('storage/'.$demo->full_thumbnail) }}"
+
                     alt="{{ $demo->title }}"
                   />
                 </a>
@@ -194,7 +195,7 @@
                         <div class="bg-light w-100 h-100 rounded shadow-sm overflow-hidden">
                             <div class="thumbnail">
                                 <a href="{{ route('demo',$demo->slug) }}">
-                                    <img class="img-responsive w-100 h-50" src="{{ $demo->thumbnail }}" alt="{{ $demo->title }}">
+                                    <img class="img-responsive w-100 h-50" src="{{ asset('storage/'.$demo->thumbnail) }}" alt="{{ $demo->title }}">
                                 </a>
                             </div>
                             <div class="details p-3">
