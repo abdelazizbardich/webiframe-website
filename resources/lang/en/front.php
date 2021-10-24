@@ -181,4 +181,5 @@ return [
     "go back to the homepage" => "Go back to the homepage",
     "home page" => "Home page",
     "uh oh! looks like you got lost" => "Uh oh! Looks like you got lost",
+    "Complete" => "Complete"
 ];

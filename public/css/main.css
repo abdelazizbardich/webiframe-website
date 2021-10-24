@@ -16012,6 +16012,7 @@ li.header-s {
 }
 .logo-holder img {
   margin-right: 10%;
+  max-width: 150px;
 }
 header ul {
   margin: 0;
