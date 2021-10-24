@@ -156,8 +156,15 @@
     }
 }
 @media only screen and (max-width: 768px) {
+    nav ul{
+        padding: 0px;
+        width: 90%;
+    }
     ul.localisation {
         display: flex;
+    }
+    .nav li.lang-btn {
+        padding: 4px;
     }
     header nav > ul:nth-child(1) > li:nth-last-child(2){
         float: left;

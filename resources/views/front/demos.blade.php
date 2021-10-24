@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-12 text-center mb-5">
                         <h2 class="m-2">{{ __('front.Our demo sites') }}</h2>
-                        <p class="m-0">{{ __('front.We are creating many site demos that fits every business needs') }}.</p>
+                        <p class="m-0">{{ __('front.We create a good and cool looking demos you can chose from to quickly build your project') }}.</p>
                     </div>
                     @foreach ($demos as $demo)
                         <div class="col-xs-12 col-sm-12 col-md-4 mb-4">

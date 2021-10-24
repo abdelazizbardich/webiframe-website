@@ -14,7 +14,6 @@
         "jquery": "^3.6",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "popper.js": "^1.16.1",
         "postcss": "^8.1.14",
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.32.11",
@@ -23,6 +22,8 @@
     "dependencies": {
         "@fontsource/tajawal": "^4.5.0",
         "@fortawesome/fontawesome-free": "^5.15.4",
-        "bootstrap": "^5.1.2"
+        "@popperjs/core": "^2.10.2",
+        "bootstrap": "^5.1.2",
+        "popper.js": "^1.16.1"
     }
 }

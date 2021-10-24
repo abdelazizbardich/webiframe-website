@@ -26,5 +26,10 @@ return [
     "id" => "#",
     "New Demo" => "Nouvelle démo",
     "New project" => "Nouveau projet",
-    "screenshots" => "Captures d'écran"
+    "screenshots" => "Captures d'écran",
+    "New caregory" => "Nouvelle catégorie",
+    "name" => "Nom",
+    "type" => "Type",
+    "project" => "Projet",
+    "demo" => "Demo"
 ];

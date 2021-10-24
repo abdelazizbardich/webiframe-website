@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row m-0">
-        <div class="col"><h1 class="display-5 fw-bold">Categories</h1></div>
+        <div class="col"><h1 class="display-5 fw-bold">{{ __('back.categories') }}</h1></div>
         <div class="col-auto"><a href="{{ route('dashboard.categories.create') }}" class="btn btn-primary me-0 ms-auto">{{ __('back.New caregory') }}</a></div>
         <div class="col-12">
         <div class="table-responsive p-2 shadow rounded border">
@@ -10,18 +10,20 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">{{ __('back.name') }}</th>
+                    <th scope="col">{{ __('back.type') }}</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>Otto</td>
-                  </tr>
+                  @isset($categories)
+                    @foreach ($categories as $category)
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>{{ $category->name}}</td>
+                      <td>{{ $category->type}}</td>
+                    </tr>
+                    @endforeach
+                  @endisset
                 </tbody>
               </table>
         </div>

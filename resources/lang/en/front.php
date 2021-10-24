@@ -1,142 +1,184 @@
 <?php
 
 return [
-    // app infos
-    "Webiframe" => "Webiframe",
-
-    // layout
-    'home' => "Home",
-    "Presentation" => "Presentation",
-
-    "Services" => "Services",
-
-    "Projects" => "Projects",
-
-    "Pricing" => "Pricing",
-
-    "Blog" => "Blog",
-
-    "Free Audit" => "Free Audit",
-
-    "Client area" => "Client area",
-
-    "Keyword" => "Keyword",
-
-    "Email us" => "Email us",
-
-    "About" => "About",
-
-    "All rights reserved" => "All rights reserved",
-
-    "We focus on the needs of small and medium businesses to improve and increase their performance" => "We focus on the needs of small and medium businesses to improve and increase their performance",
-
-    "We are passionate about our work. Our designers stay ahead of the curve to deliver engaging and user-friendly website designs to make your business stand out. Our developers are committed to maintaining the highest web standards so that your site will stand the test of time. We care about your business, that's why we work with you" => "We are passionate about our work. Our designers stay ahead of the curve to deliver engaging and user-friendly website designs to make your business stand out. Our developers are committed to maintaining the highest web standards so that your site will stand the test of time. We care about your business, that's why we work with you",
-
-    "welcome to" => "welcome to",
-
-    "Your website creation agency marrakech" => "Your website creation agency marrakech",
-
+    // api
+    "Domain name is invalid" => "The domain name is not valid",
+    "Domain name is not available" => "The domain name is not available",
+    "try another name" => "try another name",
+    "Domain name is available" => "The domain name is available",
+    "for" => "For",
+    "year" => "year",
+    "free for first year" => "free the first year",
+    "demos" => "Demos",
+    "contact" => "Contact",
     "Contact us" => "Contact us",
+    "We aim to respond to all inquiries within 2-4 business days.<br>You can also reach us by whatsapp" => "We aim to respond to all inquiries within 2-4 business days. <br> You can also reach us by WhatsApp",
+    "Submit a bug" => "Submit a bug",
+    "Sales question" => "Sales question",
+    "Technical Support" => "Technical support",
+    "Contact" => "Contact",
 
+    "first name" => "First name",
+    "last name" => "Last name",
+    "email" => "E-mail",
+    "phone" => "Telephone",
+    "subject type" => "Subject type",
+    "subject" => "Topic",
+    "message" => "Message",
+
+
+
+
+    // app infos
+    "Webiframe"=>"Webiframe",
+    // layout
+    'home' => 'Accueil',
+    "Presentation" => "Presentation",
+    "Services" => "Services",
+    "Projects" => "Projects",
+    "Pricing" => "Price",
+    "Blog" => "Blog",
+    "Free Audit" => "Free audit",
+    "Client area" => "Client area",
+    "Keyword" => "Keyword",
+    "Email us" => "Send us an email",
+    "About" => "About us",
+    "All rights reserved" => "All rights reserved",
+    "We focus on the needs of small and medium businesses to improve and increase their performance" => "We focus on the needs of small and medium businesses to improve and increase their performance",
+    "We are passionate about our work. Our designers stay ahead of the curve to deliver engaging and user-friendly website designs to make your business stand out. Our developers are committed to maintaining the highest web standards so that your site will stand the test of time. We care about your business, that's why we work with you" => "We are passionate about our work. Our designers stay one step ahead of delivering attractive and user-friendly website designs to make your business stand out. Our developers are committed to maintaining the highest web standards so that your site will stand the test of time. We care about your business, that's why we work with you",
+    "welcome to" => "welcome to",
+    "Your website creation agency marrakech" => "Your website creation agency marrakech",
+    "Contact us" => "Contact us",
     "Our web services" => "Our web services",
-
     "We love what we do and our work is very creative" => "We love what we do and our work is very creative",
-
     "We design awesome stuff" => "We design awesome stuff",
-
-    "Web development" => "Web development",
-
-    "Website and web application design and creation, from conception to publishing" => "Website and web application design and creation, from conception to publishing",
-
+    "Web development" => "Website creation",
+    "Website and web application design and creation, from conception to publishing" => "Website and web application design and creation from concept to publication",
     "E-commerce" => "E-commerce",
-
-    "Creation of merchant site, e-commerce platform with integration of all types of payment: paypal, mtc, etc" => "Creation of merchant site, e-commerce platform with integration of all types of payment: paypal, mtc, etc",
-
+    "Creation of merchant site, e-commerce platform with integration of all types of payment: paypal, mtc, etc" => "Creation of merchant site, e-commerce platform with integration of all types of payment: paypal, mtc, etc.",
     "Mobile applications" => "Mobile applications",
-
     "We profit from the design and development of ios and android mobile applications" => "We profit from the design and development of ios and android mobile applications",
-
-    "Seo" => "Seo",
-
-    "We provide digital marketing and SEO strategies for campaigns" => "We provide digital marketing and SEO strategies for campaigns",
-
-    "Why choosing us" => "Why choosing us",
-
-    "Increase your online visibility" => "Increase your online visibility",
-
-    "Success project" => "Success project",
-
-    "Loyal customers" => "Loyal customers",
-
-    "Where you will find the same quality of service and dedication around the world" => "Where you will find the same quality of service and dedication around the world",
-
+    "Seo" => "SEO",
+    "We provide digital marketing and SEO strategies for campaigns" => "We provide SEO and marketing strategy campaigns",
+    "Why choosing us" => "Why choose us",
+    "Increase your online visibility" => "Increase your visibility online",
+    "Success project" => "Successful project",
+    "Loyal customers" => "Loyal clients",
+    "Where you will find the same quality of service and dedication around the world" => "Where you will find the same quality of service and the same dedication all over the world",
     "What makes us one of the world's leading web design companies" => "What makes us one of the world's leading web design companies",
-
     "Experiences" => "Experiences",
-
     "Pay for qualified service" => "Pay for qualified service",
-
-    "keeps one step ahead of digital marketing trends. Our success puts us ahead of the pack among our competitors with our ability to anticipate change and innovation" => "keeps one step ahead of digital marketing trends. Our success puts us ahead of the pack among our competitors with our ability to anticipate change and innovation",
-
+    "keeps one step ahead of digital marketing trends. Our success puts us ahead of the pack among our competitors with our ability to anticipate change and innovation" => "stays one step ahead of digital marketing trends. Our success places us ahead of our competitors thanks to our ability to anticipate change and innovation.",
     "Website development and creation" => "Website development and creation",
-
     "Mobile application development" => "Mobile application development",
-
-    "SEO Analysis and Referencing" => "SEO Analysis and Referencing",
-
+    "SEO Analysis and Referencing" => "SEO and SEO analysis",
     "Social media management" => "Social media management",
-
     "Our completed projects" => "Our completed projects",
-
     "We love what we do and our work is very creative" => "We love what we do and our work is very creative",
-
     "We design awesome stuff" => "We design awesome stuff",
-
     "Show more +" => "Show more +",
-
-    "Service plans" => "Service plans",
-
+    "Service plans" => "Service plan",
     "The best solutions for our customers" => "The best solutions for our customers",
-
     "Custom" => "Custom",
-
     "Get started" => "Get started",
-
-    "Catalogue" => "Catalogue",
-
+    "Catalogue" => "Catalog",
     "from" => "from",
-
     "Custom design" => "Custom design",
-
     "Custom Features" => "Custom Features",
-
     "Unlimited web page creation" => "Unlimited web page creation",
-
     "Admin console" => "Admin console",
-
     "Domain name and Free hosting for the first year" => "Domain name and Free hosting for the first year",
-
     "Referencing (SEO) of your choice" => "Referencing (SEO) of your choice",
-
     "Online Support" => "Online Support",
-
     "Professional emails" => "Professional emails",
-
-    "E-commerce features" => "E-commerce features",
-
+    "E-commerce features" => "E-Comemrce features",
     "Unlimited products and services" => "Unlimited products and services",
-
     "5 web pages" => "5 web pages",
-
     "1 contact form" => "1 contact form",
-
     "1 product catalog" => "1 product catalog",
-
     "Get Free SEO Analysis" => "Get Free SEO Analysis",
-
     "We offer a free SEO audit for your website, so you can find the weak spots and how to improve them" => "We offer a free SEO audit for your website, so you can find the weak spots and how to improve them",
-
     "Send" => "Send",
-
     "Enter your website link" => "Enter your website link",
+
+    // project
+    "See website" => "See website",
+    "Create my website" => "Create my website",
+    "Create a website to your imagination" => "Create a website to your imagination",
+    "By ordering from us, you benefit from the SATISFIED OR guarantee on the design of your site" => "By ordering from us, you benefit from the SATISFIED OR guarantee on the design of your site",
+    "Easy to learn, modern and secure" => "Easy to learn, modern and secure",
+    "online quotation" => "Online quote",
+
+    // Demo
+    "Mobile version" => "Mobile version",
+    "Live demo" => "Live demo",
+    "Brief description of the site" => "Brief description of the site",
+    "Domain name" => "Domain name",
+    "validate" => "To validate",
+    "Domain is available" => "Domain is available",
+    "Domain unavailable" => "Domain unavailable",
+    "I have my own domain" => "I have my own domain",
+    "Your domain name" => "Your domain name",
+    "Enter the domain name that will be associated with your website, then press the Validate button" => "Enter the domain name that will be associated with your website, then press the Validate button",
+    "Your chosen domain name" => "Your chosen domain name",
+    "Additional options" => "Additional options",
+    "SEO web" => "SEO web",
+    "Website language" => "Website language",
+    "Second language" => "Second language",
+    "Newsletter subscription" => "Newsletter Sign-Up",
+    "Standard" => "Standard",
+    "Premium" => "Premium",
+    "No additional cost" => "No additional cost",
+    "French" => "French",
+    "English" => "English",
+    "Arab" => "Arab",
+    "None" => "None",
+    "Without Newsletter" => "Without Newsletter",
+    "With Newsletter" => "With Newsletter",
+    "Screenshots" => "Screenshot",
+    "know more" => "Know more",
+    "Demo" => "Demo",
+    "Full description" => "Full description",
+    "Our demo sites" => "Our demo sites",
+    "We are creating many site demos that fits every business needs" => "We create many site demos that meet the needs of each business",
+    "Other demos" => "Other demos",
+    "More +" => "More +",
+    "Show All" => "Display all",
+    "cannot send message" => "Unable to send message",
+    "message sent successfully" => "message sent successfully",
+    "first and last name" => "Last name and first name",
+    "Who are you ?" => "Who are you ?",
+    "Select" => "To select",
+    "Particular" => "Particular",
+    "Association" => "Association",
+    "Business" => "Business",
+    "Other" => "Other",
+    "With a price there are ideas and the means to achieve them.<br>Let's talk about it" => "With a price there are ideas and the means to realize them. <br> Let's talk about it",
+    "The due date of your project" => "The due date of your project",
+    "Your need" => "Your need",
+    "Creation of web applications" => "Creation of web applications",
+    "Creation of mobile applications" => "Creation of mobile applications",
+    "Website creation" => "Website creation",
+    "Accommodation" => "Accommodation",
+    "Web training" => "Web training",
+    "Your approximate budget in MAD" => "Your approximate budget in MAD",
+    "Request successfully received, we will contact you as soon as possible" => "Request successfully received, we will contact you as soon as possible",
+    "cannot send the request" => "Unable to send request",
+    "cannot send!" => "Cannot be sent!",
+    "website sent successfully" => "Site sent successfully",
+    "website" => "Website",
+    "order sent successfully" => "Command sent successfully",
+    "cannot send order" => "Unable to send command",
+    "finish order" => "Complete the order",
+    "Your order details have been saved, please complete the form below with your contact details so that we can contact you and confirm your order with you" => "Your order details have been saved, please complete the form below with your contact details so that we can contact you and confirm your order with you",
+    "order confirmed" => "Confirmed order",
+    "We received your order and you contact information.<br>we will contact you to confirm your order as soon as possible" => "We have received your order and your contact details. <br> we will contact you to confirm your order as soon as possible",
+    "Go to home page" => "Go to the home page",
+    "We create Web apps,Mobile apps, wordpress websites, ecommerce website,custom website and many more..." => "We create Web apps,Mobile apps, wordpress websites, ecommerce website,custom website and many more...",
+    "get your Ideas live through the web" => "Get your Ideas live through the web",
+    "We create a good and cool looking demos you can chose from to quickly build your project" => "We create a good and cool looking demos you can chose from to quickly build your project",
+    "Page not found" => "Page not found",
+    "go back to the homepage" => "Go back to the homepage",
+    "home page" => "Home page",
+    "uh oh! looks like you got lost" => "Uh oh! Looks like you got lost",
 ];

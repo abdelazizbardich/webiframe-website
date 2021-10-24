@@ -1,0 +1,35 @@
+<?php
+
+
+return [
+    "login" => "Connection",
+    "E-Mail Address" => "E-mail adress",
+    "Password" => "Password",
+    "Remember Me" => "Remember me",
+    "Forgot Your Password?" => "Forgot your password?",
+    "Dashboard" => "Dashboard",
+    "Posts" => "Positions",
+    "Projects" => "Projects",
+    "Demos" => "Demos",
+    "Orders" => "Orders",
+    "Quotations" => "Estimate",
+    "Contacts" => "Contacts",
+    "title" => "Title",
+    "slug" => "slug",
+    "short description" => "brief description",
+    "full description" => "Full description",
+    "thumbnail" => "Miniature",
+    "full thumbnail" => "Full miniature",
+    "url" => "Url",
+    "category" => "Category",
+    "categories" => "Categories",
+    "id" => "#",
+    "New Demo" => "New demo",
+    "New project" => "New project",
+    "screenshots" => "Screenshot",
+    "New caregory" => "New category",
+    "name" => "name",
+    "type" => "Type",
+    "project" => "Project",
+    "demo" => "Demo"
+];

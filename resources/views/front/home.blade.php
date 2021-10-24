@@ -11,9 +11,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col text-center text-md-start">
-                        <span class="text-uppercase">{{ __('front.welcome to') }} {{ __('front.'.config('app.name')) }}</span>
+                        <span class="text-uppercase">{{ __('front.get your Ideas live through the web') }}</span>
                         <hr>
-                        <h1 class="h1">{{ __('front.Your website creation agency marrakech') }}</h1>
+                        <h1 class="h1">{{ __('front.'.config('app.name')) }}, {{ __('front.Your website creation agency marrakech') }}</h1>
+                        <p>{{ __('front.We create Web apps,Mobile apps, wordpress websites, ecommerce website,custom website and many more...')}}</p>
                             <a href="{{ route('contact') }}" class="btn btn-primary btn-lg mt-3">{{ __('front.Contact us') }}</a>
                     </div>
                     <div class="d-none d-md-block col"></div>
@@ -22,38 +23,38 @@
         </section>
         <section id="services">
             <div class="container">
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-12 text-center">
-                        <h2 class="m-2">{{ __('front.Our web services') }}</h2>
+                        <span class="display-4 h1 m-2">{{ __('front.Our web services') }}</span>
                         <p class="m-0">{{ __('front.We love what we do and our work is very creative') }}</p>
                         <p>{{ __('front.We design awesome stuff') }}</p>
                     </div>
-                </div>
+                </div> --}}
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3 mb-3">
                         <div class="service-card shadow">
-                            <h3 class="h4 m-0">{{ __('front.Web development') }}</h3><br>
+                            <h2 class="h4 m-0">{{ __('front.Web development') }}</h2><br>
                             <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img1.png')}}" alt="{{ __('front.Web development') }}">
                             <p class="m-0">{{ __('front.Website and web application design and creation, from conception to publishing') }}</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 mb-3">
                         <div class="service-card shadow">
-                            <h3 class="h4 m-0">{{ __('front.E-commerce') }}</h3><br>
+                            <h2 class="h4 m-0">{{ __('front.E-commerce') }}</h2><br>
                             <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img2.png')}}" alt="{{ __('front.E-commerce') }}">
                             <p class="m-0">{{ __('front.Creation of merchant site, e-commerce platform with integration of all types of payment: paypal, mtc, etc') }}.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 mb-3">
                         <div class="service-card shadow">
-                            <h3 class="h4 m-0">{{ __('front.Mobile applications') }}</h3><br>
+                            <h2 class="h4 m-0">{{ __('front.Mobile applications') }}</h2><br>
                             <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img3.png')}}" alt="{{ __('front.Mobile applications') }}">
                             <p class="m-0">{{ __('front.We profit from the design and development of ios and android mobile applications') }}.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 mb-3">
                         <div class="service-card shadow">
-                            <h3 class="h4 m-0">{{ __('front.Seo') }}</h3><br>
+                            <h2 class="h4 m-0">{{ __('front.Seo') }}</h2><br>
                             <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img4.png')}}" alt="{{ __('front.Seo') }}">
                             <p class="m-0">{{ __('front.We provide digital marketing and SEO strategies for campaigns') }}.</p>
                         </div>
@@ -66,7 +67,7 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-md">
                         <span>{{ __('front.Why choosing us') }} ?</span>
-                        <h2 class="m-0">{{ __('front.Increase your online visibility') }}</h2>
+                        <span class="display-5 d-block m-0">{{ __('front.Increase your online visibility') }}</span>
                         <p>{{ __("front.We are passionate about our work. Our designers stay ahead of the curve to deliver engaging and user-friendly website designs to make your business stand out. Our developers are committed to maintaining the highest web standards so that your site will stand the test of time. We care about your business, that's why we work with you") }}.</p>
                     </div>
                     <div class="col">
@@ -148,7 +149,7 @@
                 <div class="row">
                     <div class="col-12 text-center mb-5">
                         <h2 class="m-2">{{ __('front.Our demo sites') }}</h2>
-                        <p class="m-0">{{ __('front.We are creating many site demos that fits every business needs') }}.</p>
+                        <p class="m-0">{{ __('front.We create a good and cool looking demos you can chose from to quickly build your project') }}.</p>
                     </div>
                     @foreach ($demos as $demo)
                         <div class="col-xs-12 col-sm-12 col-md-4 mb-4">
