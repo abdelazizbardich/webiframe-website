@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-
+require('laravel-mix-webp')
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,6 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').js('./resources/js/front/script.js','./public/js')
+mix.js('resources/js/app.js', 'public/js').js('./resources/js/front/script.js','./public/js').ImageWebp({
+    from: 'resources/img',
+    to: 'public/images',
+  })
     .sass('resources/sass/app.scss', 'public/css').postCss('./resources/css/front/main.css','./public/css')
     .sourceMaps();

@@ -18,7 +18,7 @@
         content: none;
     }
     section#home{
-        background-image: url(../../../resources/img/your_success.jpg);
+        background-image: url(../../../public/images/your_success.webp);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -39,7 +39,7 @@
         content: none;
     }
     section#experiences{
-        background-image: url('../../../resources/img/figure-image1.png');
+        background-image: url('../../../public/images/figure-image1.webp');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -97,7 +97,7 @@
         content: none;
     }
     section#home{
-        background-image: url(../../../resources/img/your_success.jpg);
+        background-image: url(../../../public/images/your_success.webp);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -118,7 +118,7 @@
         content: none;
     }
     section#experiences{
-        background-image: url('../../../resources/img/figure-image1.png');
+        background-image: url('../../../public/images/figure-image1.webp');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -198,7 +198,7 @@
         content: none;
     }
     section#home{
-        background-image: url(../../../resources/img/your_success.jpg);
+        background-image: url(../../../public/images/your_success.webp);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -219,7 +219,7 @@
         content: none;
     }
     section#experiences{
-        background-image: url('../../../resources/img/figure-image1.png');
+        background-image: url('../../../public/images/figure-image1.webp');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;

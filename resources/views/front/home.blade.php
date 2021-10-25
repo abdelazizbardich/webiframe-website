@@ -34,28 +34,28 @@
                     <div class="col-12 col-md-6 col-lg-3 mb-3">
                         <div class="service-card shadow">
                             <h2 class="h4 m-0">{{ __('front.Web development') }}</h2><br>
-                            <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img1.png')}}" alt="{{ __('front.Web development') }}">
+                            <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img1.webp')}}" alt="{{ __('front.Web development') }}">
                             <p class="m-0">{{ __('front.Website and web application design and creation, from conception to publishing') }}</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 mb-3">
                         <div class="service-card shadow">
                             <h2 class="h4 m-0">{{ __('front.E-commerce') }}</h2><br>
-                            <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img2.png')}}" alt="{{ __('front.E-commerce') }}">
+                            <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img2.webp')}}" alt="{{ __('front.E-commerce') }}">
                             <p class="m-0">{{ __('front.Creation of merchant site, e-commerce platform with integration of all types of payment: paypal, mtc, etc') }}.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 mb-3">
                         <div class="service-card shadow">
                             <h2 class="h4 m-0">{{ __('front.Mobile applications') }}</h2><br>
-                            <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img3.png')}}" alt="{{ __('front.Mobile applications') }}">
+                            <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img3.webp')}}" alt="{{ __('front.Mobile applications') }}">
                             <p class="m-0">{{ __('front.We profit from the design and development of ios and android mobile applications') }}.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 mb-3">
                         <div class="service-card shadow">
                             <h2 class="h4 m-0">{{ __('front.Seo') }}</h2><br>
-                            <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img4.png')}}" alt="{{ __('front.Seo') }}">
+                            <img width="100" height="90" class="mb-2" src="{{ asset('images/service_img4.webp')}}" alt="{{ __('front.Seo') }}">
                             <p class="m-0">{{ __('front.We provide digital marketing and SEO strategies for campaigns') }}.</p>
                         </div>
                     </div>
@@ -104,37 +104,37 @@
                         <p>{{ __('front.'.config('app.name')) }} {{ __('front.keeps one step ahead of digital marketing trends. Our success puts us ahead of the pack among our competitors with our ability to anticipate change and innovation') }}.</p>
                         <div class="exps">
                             <div class="exp">
-                                <p class="m-0">{{ __('front.Website development and creation') }}</p>
+                                <p class="m-0" id="webdev">{{ __('front.Website development and creation') }}</p>
                                 <div class="progress">
                                     <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90"
-                                    aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                    aria-valuemin="0" aria-labelledby="webdev" aria-valuemax="100" style="width:90%">
                                         <span class="sr-only">90% {{ __('front.Complete') }}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="exp">
-                                <p class="m-0">{{ __('front.Mobile application development') }}</p>
+                                <p class="m-0" id="mobiledev" >{{ __('front.Mobile application development') }}</p>
                                 <div class="progress">
                                     <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90"
-                                    aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                    aria-valuemin="0" aria-labelledby="mobiledev" aria-valuemax="100" style="width:90%">
                                         <span class="sr-only">90% {{ __('front.Complete') }}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="exp">
-                                <p class="m-0">{{ __('front.SEO Analysis and Referencing') }}</p>
+                                <p class="m-0" id="seo">{{ __('front.SEO Analysis and Referencing') }}</p>
                                 <div class="progress">
                                     <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90"
-                                    aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                    aria-valuemin="0" aria-labelledby="seo" aria-valuemax="100" style="width:90%">
                                         <span class="sr-only">90% {{ __('front.Complete') }}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="exp">
-                                <p class="m-0">{{ __('front.Social media management') }}</p>
+                                <p class="m-0" id="smm">{{ __('front.Social media management') }}</p>
                                 <div class="progress">
                                     <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90"
-                                    aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                    aria-valuemin="0" aria-labelledby="smm" aria-valuemax="100" style="width:90%">
                                         <span class="sr-only">90% {{ __('front.Complete') }}</span>
                                     </div>
                                 </div>
@@ -168,7 +168,7 @@
                         </div>
                     @endforeach
                     <div class="col-12 text-center">
-                        <a href="{{ route('demos') }}" class="btn btn-primary  px-5 btn-lg">{{ __('front.Show more +') }}</a>
+                        <a href="{{ route('demos') }}" class="btn btn-primary  px-5 btn-lg">{{ __('front.Show more demos') }}</a>
                     </div>
                 </div>
             </div>
@@ -193,7 +193,7 @@
                         @endforeach
                     </div>
                     <div class="col-12 text-center">
-                        <a href="{{ route('projects') }}" class="btn btn-primary  px-5 btn-lg">{{ __('front.Show more +') }}</a>
+                        <a href="{{ route('projects') }}" class="btn btn-primary  px-5 btn-lg">{{ __('front.Show more projects') }}</a>
                     </div>
                 </div>
             </div>

@@ -32,7 +32,7 @@ return [
     // app infos
     "Webiframe"=>"Webiframe",
     // layout
-    'home' => 'Accueil',
+    'home' => 'Home',
     "Presentation" => "Presentation",
     "Services" => "Services",
     "Projects" => "Projects",
@@ -137,6 +137,8 @@ return [
     "With Newsletter" => "With Newsletter",
     "Screenshots" => "Screenshot",
     "know more" => "Know more",
+    "Show more demos" => "Show more Demos",
+    "Show more projects" => "Show more projects",
     "Demo" => "Demo",
     "Full description" => "Full description",
     "Our demo sites" => "Our demo sites",

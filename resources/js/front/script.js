@@ -1,3 +1,5 @@
+import "jquery";
+import 'bootstrap';
 import "../bootstrap";
 import "./functions";
 import axios from '../axios'

@@ -1,5 +1,5 @@
 /* TypeScale */
-@import url("https://fonts.googleapis.com/css?family=Rubik:400");
+@import url("https://fonts.googleapis.com/css?family=Rubik:400&display=swap");
 @import url('../../../node_modules/bootstrap/dist/css/bootstrap.css');
 @import url('../../../node_modules/@fortawesome/fontawesome-free/css/all.css');
 html {
@@ -164,7 +164,7 @@ section#home::before {
   top: 0;
   width: 70%;
   height: 100%;
-  background-image: url("../../../resources/img/your_success.jpg");
+  background-image: url("../../../public/images/your_success.webp");
   background-position: right top;
   background-size: contain;
   background-repeat: no-repeat;
@@ -209,7 +209,7 @@ section#presentation::before {
   top: 0%;
   width: 250px;
   height: 250px;
-  background-image: url("../../../resources/img/element_01.png");
+  background-image: url("../../../public/images/element_01.webp");
   background-position: center left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -222,7 +222,7 @@ section#presentation::after {
   top: 30%;
   width: 250px;
   height: 250px;
-  background-image: url("../../../resources/img/element_03.png");
+  background-image: url("../../../public/images/element_03.webp");
   background-position: center right;
   background-size: contain;
   background-repeat: no-repeat;
@@ -239,7 +239,7 @@ section#experiences::before {
   top: 0%;
   width: 100%;
   min-height: 100%;
-  background-image: url("../../../resources/img/figure-image1.png");
+  background-image: url("../../../public/images/figure-image1.webp");
   background-position: left top;
   background-size: contain;
   background-repeat: no-repeat;
@@ -343,7 +343,7 @@ section#experiences::before {
   font-size: 0.9rem;
 }
 #audit {
-    background-image: url("../../../resources/img/home5_bg_01.jpg");
+    background-image: url("../../../public/images/home5_bg_01.webp");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -355,7 +355,7 @@ section#experiences::before {
     box-sizing: content-box;
 }
 #call-to-action {
-  background-image: url("../../../resources/img/call_01.jpg");
+  background-image: url("../../../public/images/call_01.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

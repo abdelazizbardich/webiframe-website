@@ -15,11 +15,12 @@
     <!-- Title -->
         <title>@yield('title') - {{ __('front.'.config('app.name')) }}</title>
     <!-- Favicon -->
-        <link rel="shortcut icon" href="{{ asset('images/logo.png') }}" type="image/x-icon">
+        <link rel="shortcut icon" href="{{ asset('images/logo.webp') }}" type="image/x-icon">
     <!--
          All css
     -->
-            <link rel="stylesheet" href="{{ asset('/css/main.css')}}">
+        <link rel="preload" href="{{ asset('/css/main.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ asset('/css/main.css')}}"></noscript>
 </head>
 <body>
     <header>
@@ -27,7 +28,7 @@
             <div class="row">
                 <div class="col-6 col-lg-auto">
                     <div class="logo-holder">
-                        <a href="{{ route('home') }}"><img src="{{ asset('images/logo.png')}}" class="img-fluid" alt="{{ config('app.name') }} logo"></a>
+                        <a href="{{ route('home') }}"><img width="150" height="45" src="{{ asset('images/logo.webp')}}" class="img-fluid" alt="{{ config('app.name') }} logo"></a>
                     </div>
                 </div>
                 <div class="col nav">
@@ -110,11 +111,8 @@
     <!--
         All scripts
      -->
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <!-- Script js -->
-    <script src="{{ asset('js/script.js')}}"></script>
+    <script defer src="{{ asset('js/script.js')}}"></script>
 </body>
 </html>
+ 
