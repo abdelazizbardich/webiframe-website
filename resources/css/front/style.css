@@ -99,9 +99,10 @@ header {
 }
 header nav{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: space-between;
+    justify-content: center;
     width: 100%;
+    flex-direction: row;
 }
 header .s-col ul{
     padding: 0;

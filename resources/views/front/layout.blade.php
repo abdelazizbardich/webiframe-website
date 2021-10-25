@@ -19,8 +19,7 @@
     <!--
          All css
     -->
-        <link rel="preload" href="{{ asset('/css/main.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="{{ asset('/css/main.css')}}"></noscript>
+        <link rel="stylesheet" href="{{ asset('/css/main.css')}}">
 </head>
 <body>
     <header>
