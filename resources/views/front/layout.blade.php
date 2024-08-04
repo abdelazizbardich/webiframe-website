@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}" dir="{{ (config('app.locale') == "ar")?"rtl":"ltr" }}" {{ (config('app.locale') == "ar")?'class=rtl':'' }}>
+<html lang="{{ config('app.locale') }}" dir="{{ (config('app.locale') == 'ar')?'rtl':'ltr' }}" @if (config("app.locale") == 'ar') class="rtl" @endif>
 <head>
 
     <!-- Meta datas -->
@@ -44,15 +44,13 @@
                             <li><a data-current="@yield('title')" data-title="{{ __('front.Free Audit') }}" href="{{ route('home') }}/#audit" class="client-area btn btn-lg btn-success">{{ __('front.Free Audit')}}</a></li>
                             <li><a data-current="@yield('title')" data-title="{{ __('front.Client area') }}" href="https://client.webiframe.com/" rel="nofollow" class="client-area btn btn-lg btn-warning">{{ __('front.Client area') }}</a></li>
                         </ul>
-                        <ul class="localisation">
-                            <li class="lang-btn {{ (config('app.locale') == "en")?'active':'' }}"><a href="{{ route('set-lang','en',Route::current()->getName()) }}">English</a></li>
-                            <li class="lang-btn {{ (config('app.locale') == "fr")?'active':'' }}"><a href="{{ route('set-lang','fr',Route::current()->getName()) }}">Français</a></li>
-                            <li class="lang-btn {{ (config('app.locale') == "ar")?'active':'' }}"><a href="{{ route('set-lang','ar',Route::current()->getName()) }}">العربية</a></li>
-                        </ul>
                     </nav>
                 </div>
                 <div class="col-6 col-lg-auto text-right s-col">
                     <ul>
+                        <li class="lang-btn {{ (config('app.locale') == 'en')?'active':'' }}"><a href="{{ route('set-lang','en',Route::current()->getName()) }}">English</a></li>
+                        <li class="lang-btn {{ (config('app.locale') == 'fr')?'active':'' }}"><a href="{{ route('set-lang','fr',Route::current()->getName()) }}">Français</a></li>
+                        <li class="lang-btn {{ (config('app.locale') == 'ar')?'active':'' }}"><a href="{{ route('set-lang','ar',Route::current()->getName()) }}">العربية</a></li>
                         <li class="header-s">
                             <i class="fa fa-search"></i>
                             <div class="s-box">

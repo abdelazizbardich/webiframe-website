@@ -139,4 +139,6 @@ return [
     "Send" => "يرسل",
 
     "Enter your website link" => "أدخل رابط موقع الويب الخاص بك",
+
+    "get your Ideas live through the web" => "قم ببث أفكارك مباشرة على الإنترنت"
 ];
