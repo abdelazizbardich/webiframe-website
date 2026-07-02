@@ -14,6 +14,15 @@ use Illuminate\Http\Request;
 */
 Route::get('/lang/{lang}', [App\Http\Controllers\localeController::class,'setLocalse'])->name('set-lang');
 
+Route::get('/run-migrations-vercel', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+        return 'Migrations run successfully!';
+    } catch (\Exception $e) {
+        return 'Error: ' . $e->getMessage();
+    }
+});
+
 // Front office
 Route::prefix('/')->group(function () {
     Route::get('/', [App\Http\Controllers\front\homeController::class,'index'])->name('home');
