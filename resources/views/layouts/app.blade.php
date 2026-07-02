@@ -10,7 +10,7 @@
     <title>{{ config('app.name', '') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('/js/script.js') }}" defer></script>
+    <script src="{{ asset('js/script.js') }}" defer></script>
 
     <link rel="shortcut icon" href="{{ asset('images/logo.png') }}" type="image/x-icon">
     <!-- Styles -->
