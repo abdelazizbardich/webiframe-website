@@ -53,4 +53,9 @@ class demoController extends Controller
             return redirect()->back()->withErrors(__('Cannot create demo'))->withInput();
         }
     }
+
+    public function delete(Demo $demo){
+        $demo->delete();
+        return redirect()->back();
+    }
 }

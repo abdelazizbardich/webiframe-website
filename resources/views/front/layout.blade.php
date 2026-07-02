@@ -23,7 +23,7 @@
 </head>
 <body>
     <header>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-6 col-lg-auto">
                     <div class="logo-holder">
@@ -39,18 +39,20 @@
                             <li><a data-current="@yield('title')" data-title="{{ __('front.Projects') }}" href="{{ route('projects') }}">{{ __('front.Projects')}}</a></li>
                             <li><a data-current="@yield('title')" data-title="{{ __('front.demos') }}" href="{{ route('demos') }}">{{ __('front.demos')}}</a></li>
                             <li><a data-current="@yield('title')" data-title="{{ __('front.Pricing') }}" href="{{ route('home') }}/#offers">{{ __('front.Pricing')}}</a></li>
-                            <li><a data-current="@yield('title')" data-title="{{ __('front.contact') }}" href="{{ route('contact') }}">{{ __('front.contact')}}</a></li>
+                            <li><a data-current="@yield('title')" data-title="{{ __('front.Contact us') }}" href="{{ route('contact') }}">{{ __('front.Contact us')}}</a></li>
                             {{-- <li><a data-current="@yield('title')" data-title="{{ __('front.Blog') }}" href="{{ route('blog.home') }}">{{ __('front.Blog')}}</a></li> --}}
-                            <li><a data-current="@yield('title')" data-title="{{ __('front.Free Audit') }}" href="{{ route('home') }}/#audit" class="client-area btn btn-lg btn-success">{{ __('front.Free Audit')}}</a></li>
+                            @if(false)<li><a data-current="@yield('title')" data-title="{{ __('front.Free Audit') }}" href="{{ route('home') }}/#audit" class="client-area btn btn-lg btn-success">{{ __('front.Free Audit')}}</a></li>@endif
                             <li><a data-current="@yield('title')" data-title="{{ __('front.Client area') }}" href="https://client.webiframe.com/" rel="nofollow" class="client-area btn btn-lg btn-warning">{{ __('front.Client area') }}</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-6 col-lg-auto text-right s-col">
                     <ul>
-                        <li class="lang-btn {{ (config('app.locale') == 'en')?'active':'' }}"><a href="{{ route('set-lang','en',Route::current()->getName()) }}">English</a></li>
-                        <li class="lang-btn {{ (config('app.locale') == 'fr')?'active':'' }}"><a href="{{ route('set-lang','fr',Route::current()->getName()) }}">Français</a></li>
-                        <li class="lang-btn {{ (config('app.locale') == 'ar')?'active':'' }}"><a href="{{ route('set-lang','ar',Route::current()->getName()) }}">العربية</a></li>
+
+                        <li class="lang-btn {{ (config('app.locale') == 'en')?'active':'' }}"><a href="{{ route('set-lang','en',Route::current()->getName()) }}">{{ __('front.lang_en') }}</a></li>
+                        <li class="lang-btn {{ (config('app.locale') == 'fr')?'active':'' }}"><a href="{{ route('set-lang','fr',Route::current()->getName()) }}">{{ __('front.lang_fr') }}</a></li>
+                        <li class="lang-btn {{ (config('app.locale') == 'ar')?'active':'' }}"><a href="{{ route('set-lang','ar',Route::current()->getName()) }}">{{ __('front.lang_ar') }}</a></li>
+                        
                         <li class="header-s">
                             <i class="fa fa-search"></i>
                             <div class="s-box">
@@ -75,17 +77,6 @@
     </header>
     @yield('content')
     <footer>
-        <section id="contact" class="pt-5">
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-12 text-center mb-3">
-                        <h2 class="h3">{{ __('front.Email us') }}</h2>
-                        <i class="fa fa-envelope text-success h1"></i><br><a class="text-danger" href="mailto:{{ config('info.CONTACT_EMAIL') }}">{{ config('info.CONTACT_EMAIL') }}</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr>
         <section id="f-about" class="pt-5 pb-3">
             <div class="container">
                 <div class="row justify-content-center">

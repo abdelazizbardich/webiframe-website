@@ -15,6 +15,7 @@ class demoController extends Controller
      */
     public function index()
     {
+        return redirect()->back();
         $data = [
             "demos" => Demo::with(['category'])->orderBy('id','DESC')->paginate(12)
         ];
@@ -51,6 +52,7 @@ class demoController extends Controller
      */
     public function show(Demo $demo)
     {
+        return redirect()->back();
         $data = [
             "demo" => $demo->where('id',$demo->id)->with(['category'])->first(),
             "relatedDemos" => Demo::where('category_id',$demo->category->id)->orderBy('id',"DESC")->limit(3)->get()
@@ -89,6 +91,7 @@ class demoController extends Controller
      */
     public function destroy(Demo $demo)
     {
-        //
+        $demo->delete();
+        return redirect()->back();
     }
 }

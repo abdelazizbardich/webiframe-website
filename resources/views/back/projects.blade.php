@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+
+@error('error')
+    <div class="alert alert-danger" role="alert">
+        {{ $message }}
+    </div>
+@enderror
+
     <div class="row m-0">
         <div class="col"><h1 class="display-5 fw-bold">Projects</h1></div>
         <div class="col-auto"><a href="{{ route('dashboard.project.create') }}" class="btn btn-primary me-0 ms-auto">{{ __('back.New project') }}</a></div>
@@ -27,7 +34,7 @@
                     <td scope="col">{{ $project->slug }}</td>
                     <td scope="col">{{ $project->short_description }}</td>
                     <td scope="col"><a class="small" href="{{ $project->url }}">{{ $project->url }}</a></td>
-                    <td><a href="{{ route('dashboard.project.delete') }}" class="btn btn-sm btn-danger m-1">Delete</a></td>
+                    <td><a href="{{ route('dashboard.project.delete', $project->id) }}" class="btn btn-sm btn-danger m-1">Delete</a></td>
                   </tr>
                   @endforeach
                 </tbody>

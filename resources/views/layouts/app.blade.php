@@ -36,7 +36,7 @@
                     <li class="nav-item d-block d-md-none"><a href="{{ route('dashboard.contacts.all') }}" class="nav-link">{{ __('back.Contacts') }}</a></li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ Auth::user()->name }}
+                        {{ @Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"

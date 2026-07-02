@@ -15,7 +15,7 @@ class CreateAuditsTable extends Migration
     {
         Schema::create('audits', function (Blueprint $table) {
             $table->id();
-            $table->text('site_web')->nullable()->default('...');
+            $table->text('site_web')->nullable();
             $table->timestamps();
         });
     }

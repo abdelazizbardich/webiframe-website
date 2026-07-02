@@ -2,143 +2,159 @@
 
 return [
     // app infos
-    "Webiframe" => '"ويب أيفريم"',
-
+    "Webiframe"=>"ويب أيفريم",
     // layout
-    'home' => "الصفحة الرئيسية",
-    "Presentation" => "عرض",
-
-    "Services" => "خدمات",
-
+    'home' => 'الرئيسية',
+    "Presentation" => "العرض",
+    "Services" => "الخدمات",
     "Projects" => "المشاريع",
-
-    "Pricing" => "التسعير",
-
-    "Blog" => "مدونة او مذكرة",
-
-    "Free Audit" => "مراجعة مجانية",
-
+    "Pricing" => "الأسعار",
+    "Blog" => "المدونة",
+    "Free Audit" => "تدقيق مجاني",
     "Client area" => "منطقة العملاء",
-
-    "Keyword" => "الكلمة الرئيسية",
-
-    "Email us" => "ارسل لنا عبر البريد الإلكتروني",
-
-    "About" => "عن",
-
-    "All rights reserved" => "كل الحقوق محفوظة",
-
-    "We focus on the needs of small and medium businesses to improve and increase their performance" => "نحن نركز على احتياجات الشركات الصغيرة والمتوسطة لتحسين وزيادة أدائها",
-
-    "We are passionate about our work. Our designers stay ahead of the curve to deliver engaging and user-friendly website designs to make your business stand out. Our developers are committed to maintaining the highest web standards so that your site will stand the test of time. We care about your business, that's why we work with you" => "نحن متحمسون لعملنا. يظل المصممون لدينا في الطليعة لتقديم تصميمات مواقع ويب جذابة وسهلة الاستخدام لجعل عملك متميزًا. يلتزم مطورونا بالحفاظ على أعلى معايير الويب حتى يصمد موقعك أمام اختبار الزمن. نحن نهتم بعملك ، ولهذا نعمل معك",
-
-    "welcome to" => "مرحبا بك في",
-
-    "Your website creation agency marrakech" => "وكالة إنشاء ماوقع الويب مراكش",
-
+    "Keyword" => "الكلمة المفتاحية",
+    "Email us" => "أرسل لنا بريدًا إلكترونيًا",
+    "About" => "معلومات عنا",
+    "All rights reserved" => "جميع الحقوق محفوظة",
+    "We focus on the needs of small and medium businesses to improve and increase their performance" => "نركز على احتياجات الشركات الصغيرة والمتوسطة لتحسين وزيادة أدائها",
+    "We are passionate about our work. Our designers stay ahead of the curve to deliver engaging and user-friendly website designs to make your business stand out. Our developers are committed to maintaining the highest web standards so that your site will stand the test of time. We care about your business, that's why we work with you" => "نحن شغوفون بعملنا. يظل مصممونا في طليعة الابتكار لتقديم تصاميم مواقع جذابة وسهلة الاستخدام لجعل عملك يبرز. يلتزم مطورونا بالحفاظ على أعلى معايير الويب لضمان أن موقعك سيصمد أمام اختبار الزمن. نحن نهتم بعملك، ولهذا نعمل معك",
+    "welcome to" => "مرحبًا بكم في",
+    "Your website creation agency marrakech" => "وكالة إنشاء المواقع الخاصة بك في مراكش",
     "Contact us" => "اتصل بنا",
-
-    "Our web services" => "خدمات الويب لدينا",
-
-    "We love what we do and our work is very creative" => "نحن نحب ما نقوم به وعملنا مبدع للغاية",
-
-    "We design awesome stuff" => "نصمم أشياء رائعة",
-
-    "Web development" => "تطوير الشبكة",
-
-    "Website and web application design and creation, from conception to publishing" => "تصميم وإنشاء مواقع الويب وتطبيقات الويب ، من الفكرة إلى النشر",
-
+    "Our web services" => "خدماتنا على الويب",
+    "We love what we do and our work is very creative" => "نحن نحب ما نقوم به وعملنا مبدع جدًا",
+    "We design awesome stuff" => "نحن نصمم أشياء رائعة",
+    "Web development" => "تطوير الويب",
+    "Website and web application design and creation, from conception to publishing" => "تصميم وإنشاء مواقع وتطبيقات الويب، من الفكرة إلى النشر",
     "E-commerce" => "التجارة الإلكترونية",
-
-    "Creation of merchant site, e-commerce platform with integration of all types of payment: paypal, mtc, etc" => "إنشاء موقع التاجر ومنصة التجارة الإلكترونية مع تكامل جميع أنواع الدفع: paypal ، mtc ، إلخ",
-
-    "Mobile applications" => "تطبيقات الهاتف الجوال",
-
-    "We profit from the design and development of ios and android mobile applications" => "نحن نستفيد من تصميم وتطوير تطبيقات الأجهزة المحمولة التي تعمل بنظامي iOS و android",
-
-    "Seo" => "سيو",
-
-    "We provide digital marketing and SEO strategies for campaigns" => "نحن نقدم استراتيجيات التسويق الرقمي وتحسين محركات البحث للحملات",
-
+    "Creation of merchant site, e-commerce platform with integration of all types of payment: paypal, mtc, etc" => "إنشاء موقع تجاري، منصة تجارة إلكترونية مع دمج جميع أنواع الدفع: باي بال، MTC، إلخ.",
+    "Mobile applications" => "تطبيقات الجوال",
+    "We profit from the design and development of ios and android mobile applications" => "نستفيد من تصميم وتطوير تطبيقات الجوال لنظامي iOS و Android",
+    "Seo" => "تحسين محركات البحث",
+    "We provide digital marketing and SEO strategies for campaigns" => "نقدم استراتيجيات التسويق الرقمي وتحسين محركات البحث للحملات",
     "Why choosing us" => "لماذا تختارنا",
-
     "Increase your online visibility" => "زيادة ظهورك على الإنترنت",
-
     "Success project" => "مشروع ناجح",
-
-    "Loyal customers" => "زبائن أوفياء",
-
-    "Where you will find the same quality of service and dedication around the world" => "حيث ستجد نفس جودة الخدمة والتفاني حول العالم",
-
-    "What makes us one of the world's leading web design companies" => "ما يجعلنا واحدة من الشركات الرائدة في تصميم مواقع الويب في العالم",
-
-    "Experiences" => "خبرة",
-
-    "Pay for qualified service" => "دفع مقابل الخدمة المؤهلة",
-
-    "keeps one step ahead of digital marketing trends. Our success puts us ahead of the pack among our competitors with our ability to anticipate change and innovation" => "يحتفظ بخطوة واحدة قبل اتجاهات التسويق الرقمي. نجاحنا يضعنا في الصدارة بين منافسينا بقدرتنا على توقع التغيير والابتكار",
-
-    "Website development and creation" => "تطوير وإنشاء المواقع الإلكترونية",
-
-    "Mobile application development" => "تطوير تطبيقات الهاتف المحمول",
-
-    "SEO Analysis and Referencing" => "تحليل SEO والمراجع",
-
-    "Social media management" => "إدارة مواقع التواصل الإجتماعي",
-
-    "Our completed projects" => "مشاريعنا المنجزة",
-
-    "We love what we do and our work is very creative" => "نحن نحب ما نقوم به وعملنا مبدع للغاية",
-
-    "We design awesome stuff" => "نصمم أشياء رائعة",
-
-    "Show more +" => "إظهار المزيد +",
-
+    "Loyal customers" => "عملاء مخلصون",
+    "Where you will find the same quality of service and dedication around the world" => "حيث ستجد نفس جودة الخدمة والتفاني في جميع أنحاء العالم",
+    "What makes us one of the world's leading web design companies" => "ما يجعلنا واحدة من الشركات الرائدة في تصميم الويب على مستوى العالم",
+    "Experiences" => "الخبرات",
+    "Pay for qualified service" => "ادفع مقابل خدمة مؤهلة",
+    "keeps one step ahead of digital marketing trends. Our success puts us ahead of the pack among our competitors with our ability to anticipate change and innovation" => "يبقى خطوة واحدة أمام اتجاهات التسويق الرقمي. نجاحنا يضعنا في مقدمة منافسينا بفضل قدرتنا على توقع التغيير والابتكار.",
+    "Website development and creation" => "تطوير وإنشاء المواقع",
+    "Mobile application development" => "تطوير تطبيقات الجوال",
+    "SEO Analysis and Referencing" => "تحليل وتحسين محركات البحث",
+    "Social media management" => "إدارة وسائل التواصل الاجتماعي",
+    "Our completed projects" => "مشاريعنا المكتملة",
+    "Show more +" => "عرض المزيد +",
     "Service plans" => "خطط الخدمة",
-
     "The best solutions for our customers" => "أفضل الحلول لعملائنا",
-
     "Custom" => "مخصص",
-
-    "Get started" => "البدء",
-
-    "Catalogue" => "فهرس",
-
-    "from" => "من عند",
-
-    "Custom design" => "تصميم خاص",
-
-    "Custom Features" => "الميزات المخصصة",
-
+    "Get started" => "ابدأ الآن",
+    "Catalogue" => "كتالوج",
+    "from" => "من",
+    "Custom design" => "تصميم مخصص",
+    "Custom Features" => "ميزات مخصصة",
     "Unlimited web page creation" => "إنشاء صفحات ويب غير محدودة",
-
-    "Admin console" => "وحدة تحكم المشرف",
-
-    "Domain name and Free hosting for the first year" => "اسم المجال والاستضافة المجانية للسنة الأولى",
-
-    "Referencing (SEO) of your choice" => "الرجوع إلى (SEO) من اختيارك",
-
+    "Admin console" => "لوحة الإدارة",
+    "Domain name and Free hosting for the first year" => "اسم النطاق واستضافة مجانية للسنة الأولى",
+    "Referencing (SEO) of your choice" => "تحسين محركات البحث (SEO) حسب اختيارك",
     "Online Support" => "الدعم عبر الإنترنت",
-
-    "Professional emails" => "رسائل بريد إلكتروني احترافية",
-
+    "Professional emails" => "البريد الإلكتروني الاحترافي",
     "E-commerce features" => "ميزات التجارة الإلكترونية",
-
     "Unlimited products and services" => "منتجات وخدمات غير محدودة",
-
     "5 web pages" => "5 صفحات ويب",
+    "1 contact form" => "نموذج اتصال واحد",
+    "1 product catalog" => "كتالوج منتج واحد",
+    "Get Free SEO Analysis" => "الحصول على تحليل SEO مجاني",
+    "We offer a free SEO audit for your website, so you can find the weak spots and how to improve them" => "نحن نقدم تدقيق SEO مجاني لموقعك على الويب، حتى تتمكن من العثور على النقاط الضعيفة وكيفية تحسينها",
+    "Send" => "إرسال",
+    "Enter your website link" => "أدخل رابط موقعك",
 
-    "1 contact form" => "1 نموذج اتصال",
+    // project
+    "See website" => "عرض الموقع",
+    "Create my website" => "إنشاء موقعي",
+    "Create a website to your imagination" => "إنشاء موقع وفق خيالك",
+    "By ordering from us, you benefit from the SATISFIED OR guarantee on the design of your site" => "عند الطلب منا، تستفيد من ضمان الرضا أو استرداد الأموال على تصميم موقعك",
+    "Easy to learn, modern and secure" => "سهل التعلم، حديث وآمن",
+    "online quotation" => "عرض أسعار عبر الإنترنت",
 
-    "1 product catalog" => "1 كتالوج المنتج",
-
-    "Get Free SEO Analysis" => "احصل على تحليل SEO مجاني",
-
-    "We offer a free SEO audit for your website, so you can find the weak spots and how to improve them" => "نحن نقدم تدقيقًا مجانيًا لتحسين محركات البحث لموقع الويب الخاص بك ، حتى تتمكن من العثور على نقاط الضعف وكيفية تحسينها",
-
-    "Send" => "يرسل",
-
-    "Enter your website link" => "أدخل رابط موقع الويب الخاص بك",
-
-    "get your Ideas live through the web" => "قم ببث أفكارك مباشرة على الإنترنت"
+    // Demo
+    "Mobile version" => "النسخة المحمولة",
+    "Live demo" => "عرض تجريبي مباشر",
+    "Brief description of the site" => "وصف مختصر للموقع",
+    "Domain name" => "اسم النطاق",
+    "validate" => "للتحقق",
+    "Domain is available" => "النطاق متاح",
+    "Domain unavailable" => "النطاق غير متاح",
+    "I have my own domain" => "لدي نطاقي الخاص",
+    "Your domain name" => "اسم نطاقك",
+    "Enter the domain name that will be associated with your website, then press the Validate button" => "أدخل اسم النطاق الذي سيرتبط بموقعك، ثم اضغط على زر التحقق",
+    "Your chosen domain name" => "اسم النطاق الذي اخترته",
+    "Additional options" => "خيارات إضافية",
+    "SEO web" => "تحسين محركات البحث (SEO)",
+    "Website language" => "لغة الموقع",
+    "Second language" => "اللغة الثانية",
+    "Newsletter subscription" => "الاشتراك في النشرة الإخبارية",
+    "Standard" => "القياسي",
+    "Premium" => "المميز",
+    "No additional cost" => "بدون تكلفة إضافية",
+    "French" => "الفرنسية",
+    "English" => "الإنجليزية",
+    "Arab" => "العربية",
+    "None" => "لا شيء",
+    "Without Newsletter" => "بدون النشرة الإخبارية",
+    "With Newsletter" => "مع النشرة الإخبارية",
+    "Screenshots" => "لقطات الشاشة",
+    "know more" => "اعرف المزيد",
+    "Show more demos" => "عرض المزيد من العروض التجريبية",
+    "Show more projects" => "عرض المزيد من المشاريع",
+    "Demo" => "عرض تجريبي",
+    "Full description" => "الوصف الكامل",
+    "Our demo sites" => "مواقعنا التجريبية",
+    "We are creating many site demos that fits every business needs" => "نحن نقوم بإنشاء العديد من المواقع التجريبية التي تلبي احتياجات كل عمل",
+    "Other demos" => "عروض تجريبية أخرى",
+    "More +" => "المزيد +",
+    "Show All" => "عرض الكل",
+    "cannot send message" => "غير قادر على إرسال الرسالة",
+    "message sent successfully" => "تم إرسال الرسالة بنجاح",
+    "first and last name" => "الاسم الأول واسم العائلة",
+    "Who are you ?" => "من أنت ؟",
+    "Select" => "اختر",
+    "Particular" => "فرد",
+    "Association" => "جمعية",
+    "Business" => "عمل",
+    "Other" => "آخر",
+    "With a price there are ideas and the means to achieve them.<br>Let's talk about it" => "مع وجود سعر هناك أفكار والوسائل لتحقيقها. <br> دعنا نتحدث عن ذلك",
+    "The due date of your project" => "تاريخ استحقاق مشروعك",
+    "Your need" => "احتياجاتك",
+    "Creation of web applications" => "إنشاء تطبيقات الويب",
+    "Creation of mobile applications" => "إنشاء تطبيقات الجوال",
+    "Website creation" => "إنشاء موقع ويب",
+    "Accommodation" => "الإقامة",
+    "Web training" => "تدريب الويب",
+    "Your approximate budget in MAD" => "ميزانيتك التقريبية بالدرهم المغربي",
+    "Request successfully received, we will contact you as soon as possible" => "تم استلام الطلب بنجاح، وسنتواصل معك في أقرب وقت ممكن",
+    "cannot send the request" => "غير قادر على إرسال الطلب",
+    "cannot send!" => "غير قادر على الإرسال!",
+    "website sent successfully" => "تم إرسال الموقع بنجاح",
+    "website" => "موقع ويب",
+    "order sent successfully" => "تم إرسال الطلب بنجاح",
+    "cannot send order" => "غير قادر على إرسال الطلب",
+    "finish order" => "إكمال الطلب",
+    "Your order details have been saved, please complete the form below with your contact details so that we can contact you and confirm your order with you" => "تم حفظ تفاصيل طلبك، يرجى إكمال النموذج أدناه بمعلومات الاتصال الخاصة بك حتى نتمكن من التواصل معك وتأكيد طلبك",
+    "order confirmed" => "تم تأكيد الطلب",
+    "We received your order and you contact information.<br>we will contact you to confirm your order as soon as possible" => "لقد استلمنا طلبك ومعلومات الاتصال الخاصة بك. <br> سنتواصل معك لتأكيد طلبك في أقرب وقت ممكن",
+    "Go to home page" => "الذهاب إلى الصفحة الرئيسية",
+    "We create Web apps,Mobile apps, wordpress websites, ecommerce website,custom website and many more..." => "نحن نقوم بإنشاء تطبيقات الويب، تطبيقات الجوال، مواقع ووردبريس، مواقع التجارة الإلكترونية، مواقع مخصصة والعديد من الخدمات الأخرى...",
+    "get your Ideas live through the web" => "اجعل أفكارك حية من خلال الويب",
+    "We create a good and cool looking demos you can chose from to quickly build your project" => "نحن نخلق عروضًا تجريبية جيدة وجذابة يمكنك الاختيار من بينها لبناء مشروعك بسرعة",
+    "Page not found" => "الصفحة غير موجودة",
+    "go back to the homepage" => "العودة إلى الصفحة الرئيسية",
+    "home page" => "الصفحة الرئيسية",
+    "uh oh! looks like you got lost" => "أوه! يبدو أنك ضللت الطريق",
+    "Complete" => "اكتمال",
+    "lang_en" => "الإنجليزية",
+    "lang_fr" => "الفرنسية",
+    "lang_ar" => "العربية",
 ];

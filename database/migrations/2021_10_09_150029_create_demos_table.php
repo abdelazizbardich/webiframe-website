@@ -17,11 +17,11 @@ class CreateDemosTable extends Migration
             $table->id();
             $table->string('title', 70)->nullable()->default('text');
             $table->string('slug', 70)->nullable()->default('text');
-            $table->text('thumbnail')->nullable()->default('https://');
-            $table->text('full_thumbnail')->nullable()->default('https://');
-            $table->text('short_description' ,300)->nullable()->default('...');
-            $table->longText('full_description')->nullable()->default('text');
-            $table->text('url')->nullable()->default('https://');
+            $table->text('thumbnail')->nullable();
+            $table->text('full_thumbnail')->nullable();
+            $table->text('short_description' ,300)->nullable();
+            $table->longText('full_description')->nullable();
+            $table->text('url')->nullable();
             $table->unsignedbiginteger('category_id');
             $table->json('screenshots')->nullable();
             $table->timestamps();

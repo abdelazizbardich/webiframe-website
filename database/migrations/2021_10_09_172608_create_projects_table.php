@@ -15,13 +15,13 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 100)->nullable()->default('...');
-            $table->string('slug', 70)->nullable()->default('text');
-            $table->text('short_description' ,300)->nullable()->default('...');
-            $table->longText('full_description')->nullable()->default('text');
-            $table->text('thumbnail')->nullable()->default('https://');
-            $table->text('full_thumbnail')->nullable()->default('https://');
-            $table->text('url')->nullable()->default('https://');
+            $table->string('title', 100)->nullable();
+            $table->string('slug', 70)->nullable();
+            $table->text('short_description' ,300)->nullable();
+            $table->longText('full_description')->nullable();
+            $table->text('thumbnail')->nullable();
+            $table->text('full_thumbnail')->nullable();
+            $table->text('url')->nullable();
             $table->unsignedbiginteger('category_id');
             $table->timestamps();
             $table->index('category_id');
