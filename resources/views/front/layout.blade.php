@@ -40,9 +40,11 @@
                             <li><a data-current="@yield('title')" data-title="{{ __('front.demos') }}" href="{{ route('demos') }}">{{ __('front.demos')}}</a></li>
                             <li><a data-current="@yield('title')" data-title="{{ __('front.Pricing') }}" href="{{ route('home') }}/#offers">{{ __('front.Pricing')}}</a></li>
                             <li><a data-current="@yield('title')" data-title="{{ __('front.Contact us') }}" href="{{ route('contact') }}">{{ __('front.Contact us')}}</a></li>
-                            {{-- <li><a data-current="@yield('title')" data-title="{{ __('front.Blog') }}" href="{{ route('blog.home') }}">{{ __('front.Blog')}}</a></li> --}}
-                            @if(false)<li><a data-current="@yield('title')" data-title="{{ __('front.Free Audit') }}" href="{{ route('home') }}/#audit" class="client-area btn btn-lg btn-success">{{ __('front.Free Audit')}}</a></li>@endif
-                            <li><a data-current="@yield('title')" data-title="{{ __('front.Client area') }}" href="https://client.webiframe.com/" rel="nofollow" class="client-area btn btn-lg btn-warning">{{ __('front.Client area') }}</a></li>
+                            @if(false)
+                                <li><a data-current="@yield('title')" data-title="{{ __('front.Blog') }}" href="{{ route('blog.home') }}">{{ __('front.Blog')}}</a></li>
+                                <li><a data-current="@yield('title')" data-title="{{ __('front.Free Audit') }}" href="{{ route('home') }}/#audit" class="client-area btn btn-lg btn-success">{{ __('front.Free Audit')}}</a></li>
+                                <li><a data-current="@yield('title')" data-title="{{ __('front.Client area') }}" href="https://client.webiframe.com/" rel="nofollow" class="client-area btn btn-lg btn-warning">{{ __('front.Client area') }}</a></li>
+                            @endif
                         </ul>
                     </nav>
                 </div>
@@ -53,15 +55,18 @@
                         <li class="lang-btn {{ (config('app.locale') == 'fr')?'active':'' }}"><a href="{{ route('set-lang','fr',Route::current()->getName()) }}">{{ __('front.lang_fr') }}</a></li>
                         <li class="lang-btn {{ (config('app.locale') == 'ar')?'active':'' }}"><a href="{{ route('set-lang','ar',Route::current()->getName()) }}">{{ __('front.lang_ar') }}</a></li>
                         
-                        <li class="header-s">
-                            <i class="fa fa-search"></i>
-                            <div class="s-box">
-                                <form action="./search.php" method="GET">
-                                    <input placeholder="{{ __('front.Keyword') }}..." type="search" name="s" class="s-inp">
-                                    <button><i class="fa fa-search"></i></button>
-                                </form>
-                            </div>
-                        </li>
+                        @if(false)
+                            <li class="header-s">
+                                <i class="fa fa-search"></i>
+                                <div class="s-box">
+                                    <form action="./search.php" method="GET">
+                                        <input placeholder="{{ __('front.Keyword') }}..." type="search" name="s" class="s-inp">
+                                        <button><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </li>
+                        @endif
+
                         <li>
                             <div class="show-m-nav">
                                 <span></span>
