@@ -48,7 +48,6 @@
                             <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Presentation') }}" href="{{ route('home') }}/#presentation">{{ __('front.Presentation')}}</a></li>
                             <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Services') }}" href="{{ route('home') }}/#services">{{ __('front.Services')}}</a></li>
                             <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Projects') }}" href="{{ route('projects') }}">{{ __('front.Projects')}}</a></li>
-                            <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Pricing') }}" href="{{ route('home') }}/#offers">{{ __('front.Pricing')}}</a></li>
                             <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Contact us') }}" href="{{ route('contact') }}">{{ __('front.Contact us')}}</a></li>
                             <li class="col-12 d-flex d-md-none justify-content-center">
                                 <span class="lang-btn {{ (config('app.locale') == 'en')?'active':'' }}"><a href="{{ route('set-lang','en',Route::current()->getName()) }}">{{ __('front.lang_en') }}</a></span>

@@ -18,8 +18,15 @@ class localeMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        $lang = strtolower(Cookie::get('lang'));
-        if(in_array($lang,config('info.locals'))){
+        $locals = config('info.locals');
+        $lang = strtolower((string) Cookie::get('lang'));
+
+        // If no valid language cookie is set, detect it from the browser.
+        if(!in_array($lang,$locals)){
+            $lang = $request->getPreferredLanguage($locals);
+        }
+
+        if(in_array($lang,$locals)){
             App::setLocale($lang);
         }
         return $next($request);
