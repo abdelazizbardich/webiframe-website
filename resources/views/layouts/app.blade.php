@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     @if(config('app.locale') == 'ar')
@@ -100,23 +101,51 @@
             </div>
         </main>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script async>
-      var editorHolder = document.getElementById('editorjs');
+      const maxLines = 2;
+      const maxCharsPerLine = 22;
 
-      if (editorHolder) {
-        var editor = new EditorJS({
-          holder: 'editorjs',
-          onChange: function () {
-            editor.save().then((outputData) => {
-              editorHolder.value = JSON.stringify(outputData);
-            }).catch((error) => {
-              console.log('Saving failed: ', error);
-            });
+      document.querySelectorAll('.text-editor').forEach(editor => {
+        const certainTextArea = editor.querySelector(editor.dataset.textareaSelector);
+        const quill = new Quill(editor, {
+          theme: "snow",
+          placeholder: "Max 2 lines, 22 characters each.",
+          modules: {
+            toolbar: [
+              ["bold", "italic", "underline", "strike"], // text styles
+              ["blockquote", "code-block"], // block-level
+              [{ header: 1 }, { header: 2 }], // header levels
+              [{ list: "ordered" }, { list: "bullet" }], // lists
+              [{ script: "sub" }, { script: "super" }], // subscripts/superscripts
+              [{ indent: "-1" }, { indent: "+1" }], // indent
+              [{ direction: "rtl" }], // text direction
+              [{ size: ["small", false, "large", "huge"] }], // font sizes
+              [{ header: [1, 2, 3, 4, 5, 6, false] }], // more header options
+              [{ color: [] }, { background: [] }], // colors
+              [{ font: [] }], // font family
+              [{ align: [] }], // alignment
+              ["link", "image", "video", "formula"], // media
+              ["clean"] // clear formatting
+            ]
           },
+          bounds: editor,
+          scrollingContainer: editor,
         });
-      }
+
+        quill.on('text-change', function(delta, oldDelta, source) {
+          const text = quill.getText().trim();
+          const lines = text.split('\n');
+
+          if (lines.length > maxLines || lines.some(line => line.length > maxCharsPerLine)) {
+            quill.deleteText(0, quill.getLength());
+            quill.insertText(0, oldDelta.ops.map(op => op.insert).join(''));
+          } else {
+            certainTextArea.value = text;
+          }
+        });
+
+      });
     </script>
 </body>
 </html>
