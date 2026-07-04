@@ -39,7 +39,10 @@
                     <td scope="col">{{ \Illuminate\Support\Str::limit($project->short_description, 56) }}</td>
                     <td scope="col">{{ $project->category->name ?? '-' }}</td>
                     <td scope="col"><a class="small" href="{{ $project->url }}">{{ $project->url }}</a></td>
-                    <td><a href="{{ route('dashboard.project.delete', $project->id) }}" class="btn btn-sm btn-danger m-1">Delete</a></td>
+                    <td>
+                      <a href="{{ route('dashboard.project.edit', $project->id) }}" class="btn btn-sm btn-outline-primary m-1">Edit</a>
+                      <a href="{{ route('dashboard.project.delete', $project->id) }}" class="btn btn-sm btn-danger m-1">Delete</a>
+                    </td>
                   </tr>
                   @empty
                     <tr>

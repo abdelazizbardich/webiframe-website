@@ -28,11 +28,11 @@
                     >{{ __('front.See website') }}</a
                   >
                 </div>
-                <!-- <div class="col-6">
-                  <a href="{{ route('demos') }}" class="d-block btn-lg shadow-lg btn btn-success"
+                <div class="col-6">
+                  <a href="{{ route('quotation') }}" class="d-block btn-lg shadow-lg btn btn-success"
                     >{{ __('front.Create my website') }}</a
                   >
-                </div> -->
+                </div>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@
             </div>
             <div class="text-center col-8 mb-5">
                 <div class="form-group">
-                  <a type="submit" class="btn btn-lg btn-warning">
+                  <a href="{{ route('quotation') }}" class="btn btn-lg btn-warning">
                     {{ __('front.online quotation') }}
                   </a>
                 </div>

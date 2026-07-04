@@ -31,6 +31,13 @@ class categoryController extends Controller
         return view('back.create-category');
     }
 
+    public function edit(Category $category)
+    {
+        return view('back.create-category', [
+            'category' => $category,
+        ]);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -39,12 +46,10 @@ class categoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            "name" => "required|max:50",
-            "type" => "required"
-        ]);
+        $request->validate($this->rules());
+
         if(Category::create([
-            "name" => $request->name,
+            "name" => $request->input('name'),
             "type" => $request->type,
         ])){
             return redirect()->route('dashboard.categories.all');
@@ -64,27 +69,16 @@ class categoryController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Category $category)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Category $category)
     {
-        //
+        $request->validate($this->rules());
+
+        $category->update([
+            'name' => $request->input('name'),
+            'type' => $request->input('type'),
+        ]);
+
+        return redirect()->route('dashboard.categories.all');
     }
 
     /**
@@ -96,5 +90,15 @@ class categoryController extends Controller
     public function destroy(Category $category)
     {
         //
+    }
+
+    protected function rules(): array
+    {
+        return [
+            'name.en' => 'required|max:50',
+            'name.fr' => 'nullable|max:50',
+            'name.ar' => 'nullable|max:50',
+            'type' => 'required',
+        ];
     }
 }

@@ -15,6 +15,7 @@
                     <th scope="col">#</th>
                     <th scope="col">{{ __('back.name') }}</th>
                     <th scope="col">{{ __('back.type') }}</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -24,11 +25,12 @@
                       <th scope="row">{{ $category->id }}</th>
                       <td>{{ $category->name}}</td>
                       <td><span class="badge bg-light text-dark border">{{ $category->type}}</span></td>
+                      <td><a href="{{ route('dashboard.categories.edit', $category->id) }}" class="btn btn-sm btn-outline-primary">Edit</a></td>
                     </tr>
                     @endforeach
                     @if($categories->isEmpty())
                       <tr>
-                        <td colspan="3" class="back-empty">{{ __('No records found') }}</td>
+                        <td colspan="4" class="back-empty">{{ __('No records found') }}</td>
                       </tr>
                     @endif
                   @endisset

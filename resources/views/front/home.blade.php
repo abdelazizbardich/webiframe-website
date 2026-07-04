@@ -152,9 +152,9 @@
                         <p class="m-0">{{ __('front.We love what we do and our work is very creative') }}.</p>
                         <p>{{ __('front.We design awesome stuff') }}</p>
                     </div>
-                    <div class="projects col-12 mb-5">
+                    <div class="projects row mb-5">
                         @foreach ($projects as $project)
-                            <div class="col-xs-12 col-sm-12 col-md-4 mb-4">
+                            <div class="mb-4">
                                 <div class="bg-light w-100 h-100 rounded shadow-sm overflow-hidden">
                                     <div class="thumbnail">
                                         <a href="{{ route('project',$project->slug) }}">

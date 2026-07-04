@@ -43,19 +43,25 @@ Route::prefix('/dashboard')->name('dashboard.')->group(function () {
     Route::prefix('/project')->name('project.')->group(function () {
         Route::get('/all', [App\Http\Controllers\back\projectController::class, 'index'])->name('all');
         Route::get('/create', [App\Http\Controllers\back\projectController::class, 'create'])->name('create');
+        Route::get('/edit/{project}', [App\Http\Controllers\back\projectController::class, 'edit'])->name('edit');
         Route::post('/save', [App\Http\Controllers\back\projectController::class, 'store'])->name('store');
+        Route::post('/update/{project}', [App\Http\Controllers\back\projectController::class, 'update'])->name('update');
         Route::get('/delete/{project}', [App\Http\Controllers\back\projectController::class, 'delete'])->name('delete');
     });
     Route::prefix('/categories')->name('categories.')->group(function () {
         Route::get('/all', [App\Http\Controllers\back\categoryController::class, 'index'])->name('all');
         Route::get('/create', [App\Http\Controllers\back\categoryController::class, 'create'])->name('create');
+        Route::get('/edit/{category}', [App\Http\Controllers\back\categoryController::class, 'edit'])->name('edit');
         Route::post('/save', [App\Http\Controllers\back\categoryController::class, 'store'])->name('store');
+        Route::post('/update/{category}', [App\Http\Controllers\back\categoryController::class, 'update'])->name('update');
         Route::get('/delete', [App\Http\Controllers\back\categoryController::class, 'delete'])->name('delete');
     });
     Route::prefix('/demo')->name('demo.')->group(function () {
         Route::get('/all', [App\Http\Controllers\back\demoController::class, 'index'])->name('all');
         Route::get('/create', [App\Http\Controllers\back\demoController::class, 'create'])->name('create');
+        Route::get('/edit/{demo}', [App\Http\Controllers\back\demoController::class, 'edit'])->name('edit');
         Route::post('/save', [App\Http\Controllers\back\demoController::class, 'store'])->name('store');
+        Route::post('/update/{demo}', [App\Http\Controllers\back\demoController::class, 'update'])->name('update');
         Route::get('/delete/{demo}', [App\Http\Controllers\back\demoController::class, 'delete'])->name('delete');
     });
     Route::get('/orders', [App\Http\Controllers\back\orderController::class, 'index'])->name('orders.all');
