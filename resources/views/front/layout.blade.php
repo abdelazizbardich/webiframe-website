@@ -20,6 +20,17 @@
          All css
     -->
         <link rel="stylesheet" href="{{ asset('css/main.css')}}">
+
+        @if(config('app.locale') == 'ar')
+            <style>
+                .skill .skill-title {
+                    border-left: 1px solid #d3d3d3;
+                    border-right: none;
+                    margin-right: 0px;
+                    margin-left: 15px;
+                }
+            </style>
+        @endif
 </head>
 <body>
     <header class="shadow-sm">
@@ -37,7 +48,6 @@
                             <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Presentation') }}" href="{{ route('home') }}/#presentation">{{ __('front.Presentation')}}</a></li>
                             <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Services') }}" href="{{ route('home') }}/#services">{{ __('front.Services')}}</a></li>
                             <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Projects') }}" href="{{ route('projects') }}">{{ __('front.Projects')}}</a></li>
-                            <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.demos') }}" href="{{ route('demos') }}">{{ __('front.demos')}}</a></li>
                             <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Pricing') }}" href="{{ route('home') }}/#offers">{{ __('front.Pricing')}}</a></li>
                             <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Contact us') }}" href="{{ route('contact') }}">{{ __('front.Contact us')}}</a></li>
                             <li class="col-12 d-flex d-md-none justify-content-center">
