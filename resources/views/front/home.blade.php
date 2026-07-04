@@ -155,10 +155,10 @@
                     <div class="projects row mb-5">
                         @foreach ($projects as $project)
                             <div class="mb-4">
-                                <div class="bg-light w-100 h-100 rounded shadow-sm overflow-hidden">
+                                <div class="bg-light w-100 h-100 rounded shadow-sm overflow-hidden d-flex flex-column">
                                     <div class="thumbnail">
                                         <a href="{{ route('project',$project->slug) }}">
-                                            <img class="img-responsive w-100 h-50" src="{{ asset('storage/'.$project->thumbnail) }}" alt="{{ $project->title }}">
+                                            <img class="img-responsive w-100 h-100" src="{{ asset('storage/'.$project->thumbnail) }}" alt="{{ $project->title }}">
                                         </a>
                                     </div>
                                     <div class="details p-3 h-50">
