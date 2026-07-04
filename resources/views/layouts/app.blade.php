@@ -103,9 +103,6 @@
     </div>
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script async>
-      const maxLines = 2;
-      const maxCharsPerLine = 22;
-
       document.querySelectorAll('.text-editor').forEach(editor => {
         const certainTextArea = editor.querySelector(editor.dataset.textareaSelector);
         const quill = new Quill(editor, {
@@ -135,14 +132,7 @@
 
         quill.on('text-change', function(delta, oldDelta, source) {
           const text = quill.getText().trim();
-          const lines = text.split('\n');
-
-          if (lines.length > maxLines || lines.some(line => line.length > maxCharsPerLine)) {
-            quill.deleteText(0, quill.getLength());
-            quill.insertText(0, oldDelta.ops.map(op => op.insert).join(''));
-          } else {
             certainTextArea.value = text;
-          }
         });
 
       });
