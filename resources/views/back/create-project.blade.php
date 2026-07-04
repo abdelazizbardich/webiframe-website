@@ -57,7 +57,7 @@
                  </div>
                  <div class="form-group">
                     <label for="full-description">{{ __('back.full description') }}:</label>
-                    <textarea cols="30" rows="10" name="full_description" id="full-description" placeholder="{{ __('back.full description') }}" class="form-control form-control-lg"></textarea>
+                    <div cols="30" rows="10" name="full_description" id="editorjs" placeholder="{{ __('back.full description') }}" class="form-control form-control-lg"></div>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary my-2 px-4">Publish</button>

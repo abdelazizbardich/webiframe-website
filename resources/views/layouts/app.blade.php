@@ -100,5 +100,20 @@
             </div>
         </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script async>
+      var editor = new EditorJS({
+        holder: "editorjs",
+        onChange: function() {
+          editor.save().then((outputData) => {
+            document.getElementById('editorjs').value = JSON.stringify(outputData);
+          }).catch((error) => {
+            console.log('Saving failed: ', error)
+          });
+        },
+        
+      });
+    </script>
 </body>
 </html>
