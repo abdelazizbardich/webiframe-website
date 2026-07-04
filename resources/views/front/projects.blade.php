@@ -13,7 +13,7 @@
                     <div class="projects col-12 mb-5">
                         @foreach ($projects as $project)
                             <div class="mb-4">
-                                <div class="bg-light w-100 rounded shadow-sm overflow-hidden">
+                                <div class="bg-light w-100 h-100 rounded shadow-sm overflow-hidden">
                                     <div class="thumbnail">
                                         <a href="{{ route('project',$project->slug) }}">
                                             <img class="img-responsive w-100 h-50" src="{{ asset('storage/'.$project->thumbnail) }}" alt="{{ $project->title }}">
