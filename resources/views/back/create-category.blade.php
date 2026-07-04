@@ -45,8 +45,8 @@
                         <label for="type">{{ __('back.type') }}:</label>
                         <select required name="type" id="type" class="form-select form-select-lg">
                             <option value="">{{ __('back.type') }}...</option>
-                            <option value="project" @selected(old('type', $categoryItem->type ?? null) === 'project')>{{ __('back.project') }}</option>
-                            <option value="demo" @selected(old('type', $categoryItem->type ?? null) === 'demo')>{{ __('back.demo') }}</option>
+                            <option value="project" @if(old('type', $categoryItem->type ?? null) === 'project') selected @endif>{{ __('back.project') }}</option>
+                            <option value="demo" @if(old('type', $categoryItem->type ?? null) === 'demo') selected @endif>{{ __('back.demo') }}</option>
                        </select>
                     </div>
                  </div>
