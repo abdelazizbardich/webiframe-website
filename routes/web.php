@@ -56,7 +56,7 @@ Route::prefix('/dashboard')->name('dashboard.')->group(function () {
         Route::get('/all', [App\Http\Controllers\back\demoController::class, 'index'])->name('all');
         Route::get('/create', [App\Http\Controllers\back\demoController::class, 'create'])->name('create');
         Route::post('/save', [App\Http\Controllers\back\demoController::class, 'store'])->name('store');
-        Route::post('/delete/{demo}', [App\Http\Controllers\back\demoController::class, 'delete'])->name('delete');
+        Route::get('/delete/{demo}', [App\Http\Controllers\back\demoController::class, 'delete'])->name('delete');
     });
     Route::get('/orders', [App\Http\Controllers\back\orderController::class, 'index'])->name('orders.all');
     Route::get('/quotations', [App\Http\Controllers\back\quotationController::class, 'index'])->name('quotations.all');

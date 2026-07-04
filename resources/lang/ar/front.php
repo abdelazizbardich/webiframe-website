@@ -3,6 +3,7 @@
 return [
     // app infos
     "Webiframe"=>"ويب أيفريم",
+    "We aim to respond to all inquiries within 2-4 business days." => "نهدف إلى الرد على جميع الاستفسارات في غضون 2-4 أيام عمل.",
     // layout
     'home' => 'الرئيسية',
     "Presentation" => "العرض",
@@ -157,4 +158,19 @@ return [
     "lang_en" => "الإنجليزية",
     "lang_fr" => "الفرنسية",
     "lang_ar" => "العربية",
+
+        "first name" => "الاسم الأول",
+    "last name" => "اسم العائلة",
+    "email" => "البريد الإلكتروني",
+    "phone" => "الهاتف",
+    "subject type" => "نوع الموضوع",
+    "subject" => "الموضوع",
+    "message" => "الرسالة",
+
+    "Submit a bug" => "الإبلاغ عن خطأ",
+    "Contact" => "اتصل بنا",
+    "Sales question" => "سؤال مبيعات",
+    "Technical Support" => "الدعم الفني",
+    "dashboard" => "لوحة التحكم",
+
 ];

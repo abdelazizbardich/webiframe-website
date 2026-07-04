@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2 class="m-2">{{ __('front.Contact us') }}</h2>
-                    <p class="m-0">{!! __('front.We aim to respond to all inquiries within 2-4 business days.<br>You can also reach us by whatsapp') !!}: <a href="" target="_blank" rel="noopener noreferrer"><strong>+2126 03 678 705</strong></a></p>
+                    <p class="m-0">{{ __('front.We aim to respond to all inquiries within 2-4 business days.') }}</p>
                 </div>
                 @isset($success)
                     <div class="col-12">

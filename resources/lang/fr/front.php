@@ -12,7 +12,7 @@ return [
     "demos" => "démos",
     "contact" => "Contact",
     "Contact us" => "Contactez-nous",
-    "We aim to respond to all inquiries within 2-4 business days.<br>You can also reach us by whatsapp" => "Nous visons à répondre à toutes les demandes dans un délai de 2 à 4 jours ouvrables. <br> Vous pouvez également nous contacter via WhatsApp",
+    "We aim to respond to all inquiries within 2-4 business days." => "Nous visons à répondre à toutes les demandes dans un délai de 2 à 4 jours ouvrables.",
     "Submit a bug" => "Signaler un bug",
     "Sales question" => "Question commerciale",
     "Technical Support" => "Support technique",
@@ -187,4 +187,5 @@ return [
     "lang_en" => "Anglais",
     "lang_fr" => "Français",
     "lang_ar" => "Arabe",
+    "dashboard" => "Tableau de bord",
 ];

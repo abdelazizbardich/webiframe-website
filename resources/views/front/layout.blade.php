@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="{{ asset('css/main.css')}}">
 </head>
 <body>
-    <header>
+    <header class="shadow-sm">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-lg-auto">
@@ -30,16 +30,21 @@
                         <a href="{{ route('home') }}"><img width="150" height="45" src="{{ asset('images/logo.webp')}}" class="img-fluid" alt="{{ config('app.name') }} logo"></a>
                     </div>
                 </div>
-                <div class="col nav">
+                <div class="col nav p-0">
                     <nav>
-                        <ul>
-                            <li><a data-current="@yield('title')" data-title="{{ __('front.home') }}" href="{{ route('home') }}/#home">@lang('front.home')</a></li>
-                            <li><a data-current="@yield('title')" data-title="{{ __('front.Presentation') }}" href="{{ route('home') }}/#presentation">{{ __('front.Presentation')}}</a></li>
-                            <li><a data-current="@yield('title')" data-title="{{ __('front.Services') }}" href="{{ route('home') }}/#services">{{ __('front.Services')}}</a></li>
-                            <li><a data-current="@yield('title')" data-title="{{ __('front.Projects') }}" href="{{ route('projects') }}">{{ __('front.Projects')}}</a></li>
-                            <li><a data-current="@yield('title')" data-title="{{ __('front.demos') }}" href="{{ route('demos') }}">{{ __('front.demos')}}</a></li>
-                            <li><a data-current="@yield('title')" data-title="{{ __('front.Pricing') }}" href="{{ route('home') }}/#offers">{{ __('front.Pricing')}}</a></li>
-                            <li><a data-current="@yield('title')" data-title="{{ __('front.Contact us') }}" href="{{ route('contact') }}">{{ __('front.Contact us')}}</a></li>
+                        <ul class="col-12 col-md-auto">
+                            <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.home') }}" href="{{ route('home') }}/#home">@lang('front.home')</a></li>
+                            <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Presentation') }}" href="{{ route('home') }}/#presentation">{{ __('front.Presentation')}}</a></li>
+                            <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Services') }}" href="{{ route('home') }}/#services">{{ __('front.Services')}}</a></li>
+                            <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Projects') }}" href="{{ route('projects') }}">{{ __('front.Projects')}}</a></li>
+                            <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.demos') }}" href="{{ route('demos') }}">{{ __('front.demos')}}</a></li>
+                            <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Pricing') }}" href="{{ route('home') }}/#offers">{{ __('front.Pricing')}}</a></li>
+                            <li class="col-12 col-md-auto"><a data-current="@yield('title')" data-title="{{ __('front.Contact us') }}" href="{{ route('contact') }}">{{ __('front.Contact us')}}</a></li>
+                            <li class="col-12 d-flex d-md-none justify-content-center">
+                                <span class="lang-btn {{ (config('app.locale') == 'en')?'active':'' }}"><a href="{{ route('set-lang','en',Route::current()->getName()) }}">{{ __('front.lang_en') }}</a></span>
+                                <span class="lang-btn {{ (config('app.locale') == 'fr')?'active':'' }}"><a href="{{ route('set-lang','fr',Route::current()->getName()) }}">{{ __('front.lang_fr') }}</a></span>
+                                <span class="lang-btn {{ (config('app.locale') == 'ar')?'active':'' }}"><a href="{{ route('set-lang','ar',Route::current()->getName()) }}">{{ __('front.lang_ar') }}</a></span>
+                            </li>
                             @if(false)
                                 <li><a data-current="@yield('title')" data-title="{{ __('front.Blog') }}" href="{{ route('blog.home') }}">{{ __('front.Blog')}}</a></li>
                                 <li><a data-current="@yield('title')" data-title="{{ __('front.Free Audit') }}" href="{{ route('home') }}/#audit" class="client-area btn btn-lg btn-success">{{ __('front.Free Audit')}}</a></li>
@@ -51,9 +56,9 @@
                 <div class="col-6 col-lg-auto text-right s-col">
                     <ul>
 
-                        <li class="lang-btn {{ (config('app.locale') == 'en')?'active':'' }}"><a href="{{ route('set-lang','en',Route::current()->getName()) }}">{{ __('front.lang_en') }}</a></li>
-                        <li class="lang-btn {{ (config('app.locale') == 'fr')?'active':'' }}"><a href="{{ route('set-lang','fr',Route::current()->getName()) }}">{{ __('front.lang_fr') }}</a></li>
-                        <li class="lang-btn {{ (config('app.locale') == 'ar')?'active':'' }}"><a href="{{ route('set-lang','ar',Route::current()->getName()) }}">{{ __('front.lang_ar') }}</a></li>
+                        <li class="d-none d-lg-block lang-btn {{ (config('app.locale') == 'en')?'active':'' }}"><a href="{{ route('set-lang','en',Route::current()->getName()) }}">{{ __('front.lang_en') }}</a></li>
+                        <li class="d-none d-lg-block lang-btn {{ (config('app.locale') == 'fr')?'active':'' }}"><a href="{{ route('set-lang','fr',Route::current()->getName()) }}">{{ __('front.lang_fr') }}</a></li>
+                        <li class="d-none d-lg-block lang-btn {{ (config('app.locale') == 'ar')?'active':'' }}"><a href="{{ route('set-lang','ar',Route::current()->getName()) }}">{{ __('front.lang_ar') }}</a></li>
                         
                         @if(false)
                             <li class="header-s">

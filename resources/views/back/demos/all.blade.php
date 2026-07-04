@@ -27,7 +27,7 @@
                     <td scope="col">{{ $demo->slug }}</td>
                     <td scope="col">{{ $demo->short_description }}</td>
                     <td scope="col"><a class="small" href="{{ $demo->url }}">{{ $demo->url }}</a></td>
-                    <td><a href="{{ route('dashboard.demo.delete') }}" class="btn btn-sm btn-danger m-1">Delete</a></td>
+                    <td><a href="{{ route('dashboard.demo.delete', $demo->id) }}" class="btn btn-sm btn-danger m-1">Delete</a></td>
                   </tr>
                   @endforeach
                 </tbody>

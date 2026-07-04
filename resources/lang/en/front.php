@@ -12,7 +12,7 @@ return [
     "demos" => "Demos",
     "contact" => "Contact",
     "Contact us" => "Contact us",
-    "We aim to respond to all inquiries within 2-4 business days.<br>You can also reach us by whatsapp" => "We aim to respond to all inquiries within 2-4 business days. <br> You can also reach us by WhatsApp",
+    "We aim to respond to all inquiries within 2-4 business days." => "We aim to respond to all inquiries within 2-4 business days.",
     "Submit a bug" => "Submit a bug",
     "Sales question" => "Sales question",
     "Technical Support" => "Technical support",
@@ -187,4 +187,5 @@ return [
     "lang_en" => "English",
     "lang_fr" => "French",
     "lang_ar" => "Arabic",
+    "dashboard" => "Dashboard",
 ];

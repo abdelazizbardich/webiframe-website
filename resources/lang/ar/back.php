@@ -33,4 +33,6 @@ return [
     "project" => "المشروع",
     "demo" => "العرض التجريبي",
     "Cannot create project" => "لا يمكن إنشاء المشروع",
+    "contacts" => "رسالة الاتصال",
+    "quotations" => "تقديرات",
 ];

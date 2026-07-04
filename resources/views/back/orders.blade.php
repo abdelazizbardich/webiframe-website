@@ -2,7 +2,7 @@
 
 @section('content')
     <div>
-        <h1 class="display-5 fw-bold">Orders</h1>
+        <h1 class="display-5 fw-bold">{{ __('back.Orders') }}</h1>
         <div class="table-responsive p-2 shadow rounded">
             <table class="table">
                 <thead>
