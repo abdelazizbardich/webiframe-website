@@ -17,7 +17,7 @@
                                         <img class="img-responsive w-100 h-50" src="{{ asset('storage/'.$demo->thumbnail) }}" alt="{{ $demo->title }}">
                                     </a>
                                 </div>
-                                <div class="details p-3">
+                                <div class="details p-3 h-50">
                                     <h1 class="h5">{{ $demo->title }}</h1>
                                     <p class="small">{{ $demo->short_description }}</p>
                                 </div>
