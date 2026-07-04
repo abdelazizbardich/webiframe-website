@@ -28,11 +28,11 @@
                     >{{ __('front.See website') }}</a
                   >
                 </div>
-                <div class="col-6">
+                <!-- <div class="col-6">
                   <a href="{{ route('demos') }}" class="d-block btn-lg shadow-lg btn btn-success"
                     >{{ __('front.Create my website') }}</a
                   >
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
