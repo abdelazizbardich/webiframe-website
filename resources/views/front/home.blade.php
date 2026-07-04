@@ -144,126 +144,38 @@
                 </div>
             </div>
         </section>
-        <section id="our-demos">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center mb-5">
-                        <h2 class="m-2">{{ __('front.Our demo sites') }}</h2>
-                        <p class="m-0">{{ __('front.We create a good and cool looking demos you can chose from to quickly build your project') }}.</p>
-                    </div>
-                    @foreach ($demos as $demo)
-                        <div class="col-xs-12 col-sm-12 col-md-4 mb-4">
-                            <div class="bg-light w-100 h-100 rounded shadow-sm overflow-hidden">
-                                <div class="thumbnail">
-                                    <a href="{{ route('demo',$demo->slug) }}">
-                                        <img class="img-responsive w-100 h-50" src="{{ asset('storage/'.$demo->thumbnail) }}" alt="{{ $demo->title }}">
-                                    </a>
-                                </div>
-                                <div class="details p-3">
-                                    <h1 class="h5">{{ $demo->title }}</h1>
-                                    <p class="small">{{ $demo->short_description }}</p>
-                                </div>
-                                <a href="{{ route('demo',$demo->slug) }}" class="btn-lg w-100 btn btn-primary rounded-0">{{ __('front.know more') }}</a>
-                            </div>
-                        </div>
-                    @endforeach
-                    <div class="col-12 text-center">
-                        <a href="{{ route('demos') }}" class="btn btn-primary  px-5 btn-lg">{{ __('front.Show more demos') }}</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="offers" class="mb-5">
+        <section id="projects">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center mb-3">
-                        <h2 class="m-2">{{ __('front.Service plans') }}</h2>
-                        <p class="m-0">{{ __('front.The best solutions for our customers') }}</p>
+                        <h2 class="m-2">{{ __('front.Our completed projects') }}</h2>
+                        <p class="m-0">{{ __('front.We love what we do and our work is very creative') }}.</p>
+                        <p>{{ __('front.We design awesome stuff') }}</p>
                     </div>
-                    <div class="offers-grid col-12 mb-5">
-                        <div class="offer bg-info text-light border">
-                            <h3>{{ __('front.Custom') }}</h3>
-                            <span class="d-block offer-price">750$</span>
-                            <ul>
-                                <li>{{ __('front.Custom design') }}<br>
-                                    {{ __('front.Custom Features') }}<br>
-                                    {{ __('front.Unlimited web page creation') }}</li>
-                                <li>{{ __('front.Admin console') }}</li>
-                                <li>{{ __('front.Domain name and Free hosting for the first year') }}</li>
-                                <li>{{ __('front.Referencing (SEO) of your choice') }}</li>
-                                <li>{{ __('front.Online Support') }}</li>
-                                <li>{{ __('front.Professional emails') }}</li>
-                            </ul>
-                            <div class="col-12">
-                                <a href="{{ route('quotation') }}" class="btn btn-warning btn-lg w-75 mb-5">{{ __('front.Get started') }}</a>
+                    <div class="projects col-12 mb-5">
+                        @foreach ($projects as $project)
+                            <div class="col-xs-12 col-sm-12 col-md-4 mb-4">
+                                <div class="bg-light w-100 h-100 rounded shadow-sm overflow-hidden">
+                                    <div class="thumbnail">
+                                        <a href="{{ route('project',$project->slug) }}">
+                                            <img class="img-responsive w-100 h-50" src="{{ asset('storage/'.$project->thumbnail) }}" alt="{{ $project->title }}">
+                                        </a>
+                                    </div>
+                                    <div class="details p-3">
+                                        <h1 class="h5">{{ $project->title }}</h1>
+                                        <p class="small">{{ $project->short_description }}</p>
+                                    </div>
+                                    <a href="{{ route('project',$project->slug) }}" class="btn-lg w-100 btn btn-primary rounded-0">{{ __('front.know more') }}</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="offer bg-danger text-light border">
-                            <h3>{{ __('front.Catalogue') }}</h3>
-                            <span class="d-block offer-price">350$</span>
-                            <ul>
-                                <li>{{ __('front.5 web pages') }}<br>
-                                    {{ __('front.1 contact form') }}<br>
-                                    {{ __('front.1 product catalog') }}
-                                </li>
-                                <li>{{ __('front.Admin console') }}</li>
-                                <li>{{ __('front.Domain name and Free hosting for the first year') }}</li>
-                                <li>{{ __('front.Referencing (SEO) of your choice') }}</li>
-                                <li>{{ __('front.Online Support') }}</li>
-                                <li>{{ __('front.Professional emails') }}</li>
-                            </ul>
-                            <div class="col-12">
-                                <a href="{{ route('quotation') }}" class="btn btn-light btn-lg w-75 mb-5">{{ __('front.Get started') }}</a>
-                            </div>
-                        </div>
-                        <div class="offer bg-success text-light border">
-                            <h3>{{ __('front.E-commerce') }}</h3>
-                            <span class="d-block offer-price">450$</span>
-                            <ul>
-                                <li>{{ __('front.Custom design') }}<br>
-                                    {{ __('front.E-commerce features') }}<br>
-                                    {{ __('front.Unlimited products and services') }}</li>
-                                <li>{{ __('front.Admin console') }}</li>
-                                <li>{{ __('front.Domain name and Free hosting for the first year') }}</li>
-                                <li>{{ __('front.Referencing (SEO) of your choice') }}</li>
-                                <li>{{ __('front.Online Support') }}</li>
-                                <li>{{ __('front.Professional emails') }}</li>
-                            </ul>
-                            <div class="col-12">
-                                <a href="{{ route('quotation') }}" class="btn btn-warning btn-lg w-75 mb-5">{{ __('front.Get started') }}</a>
-                            </div>
-                        </div>
+                        @endforeach
+                    </div>
+                    <div class="col-12 text-center">
+                        <a href="{{ route('projects') }}" class="btn btn-primary  px-5 btn-lg">{{ __('front.Show more projects') }}</a>
                     </div>
                 </div>
             </div>
         </section>
-        @if(false)
-            <section id="projects">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center mb-3">
-                            <h2 class="m-2">{{ __('front.Our completed projects') }}</h2>
-                            <p class="m-0">{{ __('front.We love what we do and our work is very creative') }}.</p>
-                            <p>{{ __('front.We design awesome stuff') }}</p>
-                        </div>
-                        <div class="projects col-12 mb-5">
-                            @foreach ($projects as $project)
-                                <div class="project shadow">
-                                    <a href="{{ route('project',$project->slug) }}"><img class="img-fluid" src="{{ asset('storage/'.$project->thumbnail) }}" alt="{{ $project->title }}"></a>
-                                    <div class="project-detail p-2">
-                                        <a href="{{ route('project',$project->slug) }}"><p class="m-0 border-bottom p-2">{{ $project->title }}</p></a>
-                                        <p class="p-2 small">{{ $project->short_description }}</p>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <div class="col-12 text-center">
-                            <a href="{{ route('projects') }}" class="btn btn-primary  px-5 btn-lg">{{ __('front.Show more projects') }}</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        @endif
         <section id="audit" class="d-none d-md-block text-light mt-2">
             <div class="container">
                 <div class="row justify-content-center">
@@ -273,7 +185,7 @@
                     </div>
                     <div class="text-center col-8 mb-5">
                         @isset($auditSuccess)
-                                <div class="aler alert-success py-3 px-5 rounded shadow-sm">
+                                <div class="alert alert-success py-3 px-5 rounded shadow-sm">
                                     {{ $auditSuccess }}
                                 </div>
                         @endisset

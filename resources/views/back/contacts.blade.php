@@ -1,27 +1,44 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
-        <h1 class="display-5 fw-bold">{{ __('back.contacts') }}</h1>
-        <div class="table-responsive p-2 shadow rounded">
-            <table class="table">
+    <div class="back-page">
+        <div class="back-page-header">
+            <h1 class="back-page-title"><i class="fas fa-address-book" aria-hidden="true"></i>{{ __('back.Contacts') }}</h1>
+        </div>
+
+        <div class="back-surface back-surface-table">
+            <div class="table-responsive">
+            <table class="table table-hover align-middle back-table">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">{{ __('back.name') }}</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">{{ __('back.type') }}</th>
+                    <th scope="col">{{ __('back.message') }}</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>Otto</td>
-                  </tr>
+                  @if(isset($contacts) && count($contacts))
+                    @foreach ($contacts as $contact)
+                    <tr>
+                      <th scope="row">{{ $contact->id }}</th>
+                      <td>{{ trim(($contact->first_name ?? '').' '.($contact->last_name ?? '')) ?: '-' }}</td>
+                      <td>{{ $contact->email ?? '-' }}</td>
+                      <td>{{ $contact->phone ?? '-' }}</td>
+                      <td>{{ $contact->subject_type ?? '-' }}</td>
+                      <td>{{ \Illuminate\Support\Str::limit($contact->message, 50) }}</td>
+                    </tr>
+                    @endforeach
+                  @else
+                    <tr>
+                      <td colspan="6" class="back-empty">{{ __('No records found') }}</td>
+                    </tr>
+                  @endif
                 </tbody>
               </table>
+            </div>
         </div>
     </div>
 @endsection

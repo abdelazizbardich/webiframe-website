@@ -19,4 +19,125 @@ html{font-size:90%}body{background:#fff;color:#000;font-family:Rubik,sans-serif;
 /* Dashboard Layout */
 :root{--dashboard-bg:#f4f7fb;--surface:#ffffff;--surface-soft:#f7fbff;--ink-900:#1e293b;--ink-700:#334155;--brand:#0369a1;--brand-soft:rgba(3,105,161,.12);--stroke:#dbe4ef;--shadow-soft:0 15px 45px rgba(15,23,42,.08)}body.dashboard-layout #app{color:var(--ink-900);font-family:Outfit,sans-serif}body.dashboard-layout{background:radial-gradient(circle at top right,rgba(14,165,233,.18),transparent 45%),radial-gradient(circle at bottom left,rgba(6,182,212,.12),transparent 40%),var(--dashboard-bg);min-height:100vh}body.dashboard-layout .dashboard-topbar{backdrop-filter:blur(10px);background:hsla(0,0%,100%,.88);border-bottom:1px solid var(--stroke);box-shadow:0 8px 24px rgba(15,23,42,.05);position:sticky;top:0;z-index:1030}body.dashboard-layout .brand-pill{background:linear-gradient(120deg,#0ea5e9,#14b8a6);border-radius:999px;color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.06em;margin-right:.65rem;padding:.35rem .9rem;text-transform:uppercase}body.dashboard-layout .dashboard-brand{align-items:center;color:var(--ink-900);display:flex;font-weight:700;letter-spacing:.01em;text-decoration:none}body.dashboard-layout .dashboard-shell{padding:1.25rem}body.dashboard-layout .sidebar-wrap{padding-right:.75rem;position:sticky;top:88px}body.dashboard-layout .sidebar-panel{background:var(--surface);border:1px solid var(--stroke);border-radius:18px;box-shadow:var(--shadow-soft);max-width:100%;padding:1.25rem;width:280px}body.dashboard-layout .sidebar-title{border-bottom:1px solid var(--stroke);color:var(--ink-900);font-size:1.15rem;font-weight:700;margin-bottom:1.15rem;padding-bottom:.75rem}body.dashboard-layout .dashboard-nav-link{border-radius:10px;color:var(--ink-700);display:block;font-weight:500;margin-bottom:.3rem;padding:.62rem .85rem;text-decoration:none;transition:all .2s ease}body.dashboard-layout .dashboard-nav-link i{width:1.15rem}body.dashboard-layout .dashboard-nav-link:hover{background:var(--surface-soft);color:var(--ink-900);transform:translateX(3px)}body.dashboard-layout .dashboard-nav-link.active{background:var(--brand-soft);color:var(--brand);font-weight:600}body.dashboard-layout .content-panel{background:hsla(0,0%,100%,.86);border:1px solid var(--stroke);border-radius:20px;box-shadow:var(--shadow-soft);min-height:calc(100vh - 140px);padding:1.6rem}body.dashboard-layout .dropdown-menu{border:1px solid var(--stroke);border-radius:12px;box-shadow:var(--shadow-soft);padding:.4rem}body.dashboard-layout .dropdown-item{border-radius:8px;font-weight:500}body.dashboard-layout .navbar-nav .nav-link.active{color:var(--brand);font-weight:600}body.dashboard-layout .dashboard-animate-panel{animation:dashboardSlideIn .45s ease-out both}body.dashboard-layout .dashboard-animate-content{animation:dashboardFadeUp .55s ease-out .08s both}body.dashboard-layout .sidebar-panel .list-unstyled li{opacity:0;transform:translateX(-10px);animation:dashboardStagger .35s ease-out forwards}body.dashboard-layout .sidebar-panel .list-unstyled li:first-child{animation-delay:.08s}body.dashboard-layout .sidebar-panel .list-unstyled li:nth-child(2){animation-delay:.12s}body.dashboard-layout .sidebar-panel .list-unstyled li:nth-child(3){animation-delay:.16s}body.dashboard-layout .sidebar-panel .list-unstyled li:nth-child(4){animation-delay:.2s}body.dashboard-layout .sidebar-panel .list-unstyled li:nth-child(5){animation-delay:.24s}body.dashboard-layout .sidebar-panel .list-unstyled li:nth-child(6){animation-delay:.28s}body.dashboard-layout .sidebar-panel .list-unstyled li:nth-child(7){animation-delay:.32s}@keyframes dashboardFadeUp{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}@keyframes dashboardSlideIn{0%{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:translateX(0)}}@keyframes dashboardStagger{0%{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}@media (max-width:991.98px){body.dashboard-layout .dashboard-shell{padding:.9rem}body.dashboard-layout .content-panel{border-radius:16px;margin-top:.9rem;min-height:auto;padding:1.1rem}body.dashboard-layout .dashboard-animate-content,body.dashboard-layout .dashboard-animate-panel{animation:none}body.dashboard-layout .sidebar-panel .list-unstyled li{animation:none;opacity:1;transform:none}}
 
+/* Back Pages */
+body.dashboard-layout .back-page {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+body.dashboard-layout .back-page-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+}
+
+body.dashboard-layout .back-page-title {
+	margin: 0;
+	font-size: clamp(1.4rem, 2vw, 2rem);
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	display: flex;
+	align-items: center;
+	gap: 0.55rem;
+}
+
+body.dashboard-layout .back-page-title i {
+	color: var(--brand);
+}
+
+body.dashboard-layout .back-surface {
+	background: #fff;
+	border: 1px solid var(--stroke);
+	border-radius: 16px;
+	box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+	padding: 1rem;
+}
+
+body.dashboard-layout .back-surface-table {
+	padding: 0.75rem;
+}
+
+body.dashboard-layout .back-table {
+	margin: 0;
+}
+
+body.dashboard-layout .back-table thead th {
+	white-space: nowrap;
+	border-bottom-width: 1px;
+	border-color: var(--stroke);
+	color: var(--ink-700);
+	font-size: 0.82rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+body.dashboard-layout .back-table tbody td,
+body.dashboard-layout .back-table tbody th {
+	vertical-align: middle;
+}
+
+body.dashboard-layout .back-muted {
+	color: #64748b;
+	font-size: 0.9rem;
+}
+
+body.dashboard-layout .back-thumb {
+	width: 44px;
+	height: 44px;
+	border-radius: 10px;
+	object-fit: cover;
+	border: 1px solid var(--stroke);
+}
+
+body.dashboard-layout .back-form .form-group {
+	margin-bottom: 0.95rem;
+}
+
+body.dashboard-layout .back-form .form-control,
+body.dashboard-layout .back-form .form-select {
+	border-color: #cdd8e5;
+	border-radius: 10px;
+}
+
+body.dashboard-layout .back-form .form-control:focus,
+body.dashboard-layout .back-form .form-select:focus {
+	border-color: #7db8da;
+	box-shadow: 0 0 0 0.2rem rgba(3, 105, 161, 0.15);
+}
+
+body.dashboard-layout .back-empty {
+	text-align: center;
+	padding: 1.6rem 1rem;
+	color: #64748b;
+}
+
+body.dashboard-layout .back-stat-grid {
+	display: grid;
+	gap: 0.9rem;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+body.dashboard-layout .back-stat-card {
+	background: #fff;
+	border: 1px solid var(--stroke);
+	border-radius: 14px;
+	padding: 1rem;
+}
+
+body.dashboard-layout .back-stat-card .label {
+	display: block;
+	color: #64748b;
+	font-size: 0.85rem;
+	margin-bottom: 0.4rem;
+}
+
+body.dashboard-layout .back-stat-card .value {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: #0f172a;
+}
+
 /*# sourceMappingURL=main.css.map*/
