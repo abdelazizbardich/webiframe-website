@@ -76,14 +76,16 @@
                  <div class="row g-2">
                     <div class="form-group col-md-6">
                         <label for="url">{{ __('back.url') }}:</label>
-                        <input type="url" name="url" id="url" placeholder="{{ __('back.url') }}" class="form-control form-control-lg">
+                        <input type="url" name="url" id="url" value="{{ old('url', $projectItem->url ?? '') }}" placeholder="{{ __('back.url') }}" class="form-control form-control-lg">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="category">{{ __('back.category') }}:</label>
                         <select required name="category_id" id="category" class="form-select form-select-lg">
-                            <option value="">{{ __('back.category') }}...</option>
+                            <option value="{{ old('category_id', $projectItem->category_id ?? '') }}">{{ __('back.category') }}...</option>
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}" @selected((string) old('category_id', $projectItem->category_id ?? '') === (string) $category->id)>{{ $category->name }}</option>
+                                <option value="{{ $category->id }}" 
+                                @if(old('category_id', $projectItem->category_id ?? '') == $category->id) selected @endif
+                                >{{ $category->name }}</option>
                             @endforeach
                        </select>
                     </div>
@@ -92,20 +94,20 @@
                  <div class="form-group">
                     <label class="mb-2">{{ __('back.full description') }}:</label>
                     <div class="row g-3">
-                        <div class="col-12">
+                        <div class="col-12" dir="ltr">
                             <label for="full-description-en" class="form-label">English (EN)</label>
-                            <div style="min-height:300px;" data-textareaSelector="#full-description-en" placeholder="{{ __('back.full description') }}" class="text-editor">{{ old('full_description.en', $fullDescriptionTranslations['en']) }}</div>
-                            <textarea hidden name="full_description[en]" id="full-description-en" ></textarea>
+                            <div style="min-height:300px;" data-textareaSelector="#full-description-en" placeholder="{{ __('back.full description') }}" class="text-editor" dir="ltr">{!! old('full_description.en', $fullDescriptionTranslations['en']) !!}</div>
+                            <textarea hidden name="full_description[en]" id="full-description-en" >{{ old('full_description.en', $fullDescriptionTranslations['en']) }}</textarea>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12" dir="ltr">
                             <label for="full-description-fr" class="form-label">Francais (FR)</label>
-                            <div style="min-height:300px;" data-textareaSelector="#full-description-fr" placeholder="{{ __('back.full description') }}" class="text-editor">{{ old('full_description.fr', $fullDescriptionTranslations['fr']) }}</div>
-                            <textarea hidden name="full_description[fr]" id="full-description-fr" ></textarea>
+                            <div style="min-height:300px;" data-textareaSelector="#full-description-fr" placeholder="{{ __('back.full description') }}" class="text-editor" dir="ltr">{!! old('full_description.fr', $fullDescriptionTranslations['fr']) !!}</div>
+                            <textarea hidden name="full_description[fr]" id="full-description-fr" >{{ old('full_description.fr', $fullDescriptionTranslations['fr']) }}</textarea>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12" dir="rtl">
                             <label for="full-description-ar" class="form-label">Arabic (AR)</label>
-                            <div style="min-height:300px;" data-textareaSelector="#full-description-ar" placeholder="{{ __('back.full description') }}" class="text-editor" dir="rtl">{{ old('full_description.ar', $fullDescriptionTranslations['ar']) }}</div>
-                            <textarea hidden name="full_description[ar]" id="full-description-ar" ></textarea>
+                            <div style="min-height:300px;" data-textareaSelector="#full-description-ar" placeholder="{{ __('back.full description') }}" class="text-editor" dir="rtl">{!! old('full_description.ar', $fullDescriptionTranslations['ar']) !!}</div>
+                            <textarea hidden name="full_description[ar]" id="full-description-ar" >{{ old('full_description.ar', $fullDescriptionTranslations['ar']) }}</textarea>
                         </div>
                     </div>
                 </div>

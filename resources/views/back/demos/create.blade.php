@@ -95,17 +95,20 @@
                  <div class="form-group">
                     <label class="mb-2">{{ __('back.full description') }}:</label>
                     <div class="row g-3">
-                        <div class="col-12">
+                        <div class="col-12" dir="ltr">
                             <label for="full-description-en" class="form-label">English (EN)</label>
-                            <textarea cols="30" rows="8" name="full_description[en]" id="full-description-en" placeholder="{{ __('back.full description') }}" class="form-control form-control-lg">{{ old('full_description.en', $fullDescriptionTranslations['en']) }}</textarea>
+                            <div style="min-height:300px;" data-textareaSelector="#full-description-en" placeholder="{{ __('back.full description') }}" class="text-editor" dir="ltr">{!! old('full_description.en', $fullDescriptionTranslations['en']) !!}</div>
+                            <textarea hidden name="full_description[en]" id="full-description-en" >{{ old('full_description.en', $fullDescriptionTranslations['en']) }}</textarea>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12" dir="ltr">
                             <label for="full-description-fr" class="form-label">Francais (FR)</label>
-                            <textarea cols="30" rows="8" name="full_description[fr]" id="full-description-fr" placeholder="{{ __('back.full description') }}" class="form-control form-control-lg">{{ old('full_description.fr', $fullDescriptionTranslations['fr']) }}</textarea>
+                            <div style="min-height:300px;" data-textareaSelector="#full-description-fr" placeholder="{{ __('back.full description') }}" class="text-editor" dir="ltr">{!! old('full_description.fr', $fullDescriptionTranslations['fr']) !!}</div>
+                            <textarea hidden name="full_description[fr]" id="full-description-fr" >{{ old('full_description.fr', $fullDescriptionTranslations['fr']) }}</textarea>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12" dir="rtl">
                             <label for="full-description-ar" class="form-label">Arabic (AR)</label>
-                            <textarea cols="30" rows="8" name="full_description[ar]" id="full-description-ar" placeholder="{{ __('back.full description') }}" class="form-control form-control-lg" dir="rtl">{{ old('full_description.ar', $fullDescriptionTranslations['ar']) }}</textarea>
+                            <div style="min-height:300px;" data-textareaSelector="#full-description-ar" placeholder="{{ __('back.full description') }}" class="text-editor" dir="rtl">{!! old('full_description.ar', $fullDescriptionTranslations['ar']) !!}</div>
+                            <textarea hidden name="full_description[ar]" id="full-description-ar" >{{ old('full_description.ar', $fullDescriptionTranslations['ar']) }}</textarea>
                         </div>
                     </div>
                 </div>
