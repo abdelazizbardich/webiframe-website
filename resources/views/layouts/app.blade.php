@@ -28,7 +28,6 @@
         ['label' => __('back.Posts'), 'route' => 'dashboard.posts.all', 'active' => 'dashboard.posts.*', 'icon' => 'fas fa-newspaper'],
         ['label' => __('back.categories'), 'route' => 'dashboard.categories.all', 'active' => 'dashboard.categories.*', 'icon' => 'fas fa-sitemap'],
         ['label' => __('back.Projects'), 'route' => 'dashboard.project.all', 'active' => 'dashboard.project.*', 'icon' => 'fas fa-briefcase'],
-        ['label' => __('back.Demos'), 'route' => 'dashboard.demo.all', 'active' => 'dashboard.demo.*', 'icon' => 'fas fa-vial'],
         ['label' => __('back.Orders'), 'route' => 'dashboard.orders.all', 'active' => 'dashboard.orders.*', 'icon' => 'fas fa-shopping-cart'],
         ['label' => __('back.Quotations'), 'route' => 'dashboard.quotations.all', 'active' => 'dashboard.quotations.*', 'icon' => 'fas fa-file-signature'],
         ['label' => __('back.Contacts'), 'route' => 'dashboard.contacts.all', 'active' => 'dashboard.contacts.*', 'icon' => 'fas fa-address-book'],
