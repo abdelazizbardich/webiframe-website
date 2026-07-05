@@ -14,14 +14,17 @@ use Illuminate\Http\Request;
 */
 Route::get('/lang/{lang}', [App\Http\Controllers\localeController::class,'setLocalse'])->name('set-lang');
 
+// Sitemap
+Route::get('/sitemap.xml', [App\Http\Controllers\front\sitemapController::class,'index'])->name('sitemap');
+
 // Front office
 Route::prefix('/')->group(function () {
     Route::get('/', [App\Http\Controllers\front\homeController::class,'index'])->name('home');
     Route::get('/project/{project:slug}', [App\Http\Controllers\front\projectController::class,'show'])->name('project');
     Route::get('/projects', [App\Http\Controllers\front\projectController::class,'index'])->name('projects');
 
-    Route::get('/demo/{demo:slug}', [App\Http\Controllers\front\demoController::class,'show'])->name('demo');
-    Route::get('/demos', [App\Http\Controllers\front\demoController::class,'index'])->name('demos');
+    // Route::get('/demo/{demo:slug}', [App\Http\Controllers\front\demoController::class,'show'])->name('demo');
+    // Route::get('/demos', [App\Http\Controllers\front\demoController::class,'index'])->name('demos');
 
     Route::get('/contact', [App\Http\Controllers\front\contactController::class,'index'])->name('contact');
     Route::post('/contact', [App\Http\Controllers\front\contactController::class,'store'])->name('post-contact');
@@ -37,6 +40,7 @@ Route::prefix('/')->group(function () {
 
 // Back office
 Auth::routes(['register' => false]);
+
 Route::prefix('/dashboard')->name('dashboard.')->group(function () {
     Route::get('/', [App\Http\Controllers\back\HomeController::class, 'index'])->name('home');
     Route::get('/posts', [App\Http\Controllers\back\postsController::class, 'index'])->name('posts.all');
