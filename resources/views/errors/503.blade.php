@@ -1,5 +1,5 @@
 <!doctype html>
-<title>Site Maintenance</title>
+<title>503 - Site under maintenance</title>
 <style>
   body {
     text-align: center;
